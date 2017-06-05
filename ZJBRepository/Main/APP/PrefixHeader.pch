@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  ZJBRepository
+//
+//  Created by 周结兵 on 2017/6/3.
+//  Copyright © 2017年 ZJBCode. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Masonry/Masonry.h>
+
+#define MainWidth [[UIScreen mainScreen] bounds].size.width //屏幕宽
+#define MainHeight [[UIScreen mainScreen] bounds].size.height //屏幕高
+
+#define ScaleX MainWidth/375 //屏幕的比例(以6,7的尺寸为准)
+
+//颜色 16进制 例如: UIColorFromRGB(0x2b2b2b)
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//系统字体
+#define FontSystemSize(size) [UIFont systemFontOfSize:size]
+
+#endif /* PrefixHeader_pch */
+
+#ifdef DEBUG
+#if TARGET_IPHONE_SIMULATOR
+#define XNLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define XNLog(...) printf("%s 第%d行 \n %s\n\n",__func__,__LINE__,[[NSString stringWithFormat:__VA_ARGS__]UTF8String])
+#endif
+#else
+#define XNLog(...)
+
+#endif

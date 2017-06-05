@@ -1,0 +1,6 @@
+framework module Pods_ZJBRepository {
+  umbrella header "Pods-ZJBRepository-umbrella.h"
+
+  export *
+  module * { export * }
+}
