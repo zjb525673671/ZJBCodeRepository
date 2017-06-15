@@ -17,6 +17,7 @@
 		F372AB6C1EE2A9B300216C16 /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB6B1EE2A9B300216C16 /* HomePageModel.m */; };
 		F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB6E1EE2A9CB00216C16 /* HomePagePresenter.m */; };
 		F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB711EE2A9F500216C16 /* HomePageHeadView.m */; };
+		F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E95E51EF26D9F00E34CD1 /* XNHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		F372AB701EE2A9F500216C16 /* HomePageHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeadView.h; sourceTree = "<group>"; };
 		F372AB711EE2A9F500216C16 /* HomePageHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeadView.m; sourceTree = "<group>"; };
 		F372AB731EE2AF7500216C16 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F39E95E41EF26D9F00E34CD1 /* XNHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNHelper.h; sourceTree = "<group>"; };
+		F39E95E51EF26D9F00E34CD1 /* XNHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 		F372AB3A1EE2A15200216C16 /* ZJBRepository */ = {
 			isa = PBXGroup;
 			children = (
+				F39E95E31EF26D6600E34CD1 /* Tools */,
 				F372AB521EE2A29B00216C16 /* Main */,
 				F372AB5E1EE2A8E800216C16 /* Function */,
 				F372AB3B1EE2A15200216C16 /* Supporting Files */,
@@ -192,6 +196,15 @@
 				F372AB711EE2A9F500216C16 /* HomePageHeadView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F39E95E31EF26D6600E34CD1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F39E95E41EF26D9F00E34CD1 /* XNHelper.h */,
+				F39E95E51EF26D9F00E34CD1 /* XNHelper.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +331,7 @@
 				F372AB6C1EE2A9B300216C16 /* HomePageModel.m in Sources */,
 				F372AB691EE2A95700216C16 /* HomePageViewController.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
+				F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,
 				F372AB661EE2A91500216C16 /* BaseViewController.m in Sources */,
