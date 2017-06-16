@@ -20,6 +20,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[HomePageViewController alloc]init]];
+    UIImage *newImage = [UIImage imageNamed:@"nav_backImage"];
+    newImage = [newImage resizableImageWithCapInsets:UIEdgeInsetsMake(0, newImage.size.width/2 - 10, 0, newImage.size.width/2 - 10)];
+    [nav.navigationBar setBackgroundImage:newImage forBarMetrics:UIBarMetricsDefault];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
