@@ -18,6 +18,7 @@
 		F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB6E1EE2A9CB00216C16 /* HomePagePresenter.m */; };
 		F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB711EE2A9F500216C16 /* HomePageHeadView.m */; };
 		F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E95E51EF26D9F00E34CD1 /* XNHelper.m */; };
+		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		F372AB731EE2AF7500216C16 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F39E95E41EF26D9F00E34CD1 /* XNHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNHelper.h; sourceTree = "<group>"; };
 		F39E95E51EF26D9F00E34CD1 /* XNHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNHelper.m; sourceTree = "<group>"; };
+		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
+		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 				F39E95E31EF26D6600E34CD1 /* Tools */,
 				F372AB521EE2A29B00216C16 /* Main */,
 				F372AB5E1EE2A8E800216C16 /* Function */,
+				F39E968A1F0230A300E34CD1 /* CommonUI */,
 				F372AB3B1EE2A15200216C16 /* Supporting Files */,
 			);
 			path = ZJBRepository;
@@ -205,6 +209,23 @@
 				F39E95E51EF26D9F00E34CD1 /* XNHelper.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		F39E968A1F0230A300E34CD1 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				F39E968B1F0230FB00E34CD1 /* GradientView */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		F39E968B1F0230FB00E34CD1 /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				F39E968C1F02321B00E34CD1 /* XNGradientView.h */,
+				F39E968D1F02321B00E34CD1 /* XNGradientView.m */,
+			);
+			path = GradientView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +354,7 @@
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
 				F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
+				F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */,
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,
 				F372AB661EE2A91500216C16 /* BaseViewController.m in Sources */,
 				F372AB3D1EE2A15200216C16 /* main.m in Sources */,

@@ -7,8 +7,11 @@
 //
 
 #import "HomePageViewController.h"
+#import "XNGradientView.h"
 
 @interface HomePageViewController ()
+
+@property (nonatomic, strong) XNGradientView *maxMoneyView;
 
 @end
 
@@ -44,7 +47,13 @@
 
 - (void)xn_initSubViews
 {
-    
+    [self.view addSubview:self.maxMoneyView];
+    [self.maxMoneyView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(-8*ScaleX);
+        make.top.equalTo(self.view).offset(66*ScaleX);
+        make.size.mas_equalTo(CGSizeMake(86*ScaleX, 86*ScaleX));
+    }];
+    [self.maxMoneyView initSubViewsWithMoney:@"1500"];
 }
 
 #pragma mark - 🔄overwrite
@@ -59,5 +68,18 @@
 
 #pragma mark - ☸getter and setter
 
+- (XNGradientView *)maxMoneyView
+{
+    if (!_maxMoneyView)
+    {
+        _maxMoneyView = [[XNGradientView alloc]init];
+        _maxMoneyView.statrColor = UIColorFromRGB(0xffe300);
+        _maxMoneyView.endColor = UIColorFromRGB(0xff9100);
+        _maxMoneyView.shadowColor = UIColorFromARGB(0xffb618, 0.5);
+//        _maxMoneyView.layer.cornerRadius = 43*ScaleX;
+//        _maxMoneyView.clipsToBounds = YES;
+    }
+    return _maxMoneyView;
+}
 
 @end

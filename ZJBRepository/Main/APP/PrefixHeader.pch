@@ -18,9 +18,12 @@
 
 //颜色 16进制 例如: UIColorFromRGB(0x2b2b2b)
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
+//带透明度颜色
+#define UIColorFromARGB(rgbValue, A) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:A]
 //系统字体
 #define FontSystemSize(size) [UIFont systemFontOfSize:size]
+
+#define WeakSelf(type)  __weak typeof(type) weak##type = type;
 
 #endif /* PrefixHeader_pch */
 
