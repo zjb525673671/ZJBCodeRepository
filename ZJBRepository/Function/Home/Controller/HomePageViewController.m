@@ -12,6 +12,8 @@
 @interface HomePageViewController ()
 
 @property (nonatomic, strong) XNGradientView *maxMoneyView;
+@property (nonatomic, strong) UIImageView *successImageView;
+@property (nonatomic, strong) UIImageView *failImageView;
 
 @end
 
@@ -48,14 +50,86 @@
 - (void)xn_initSubViews
 {
     [self.view addSubview:self.maxMoneyView];
+    [self.view addSubview:self.successImageView];
+    [self.view addSubview:self.failImageView];
     [self.maxMoneyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(-8*ScaleX);
         make.top.equalTo(self.view).offset(66*ScaleX);
         make.size.mas_equalTo(CGSizeMake(86*ScaleX, 86*ScaleX));
     }];
-    [self.maxMoneyView initSubViewsWithMoney:@"1500"];
+    [self.maxMoneyView updateMaxMoney:@"1500"];
+    [self.successImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(100*ScaleX);
+        make.top.equalTo(self.view).offset(100*ScaleX);
+        make.size.mas_equalTo(CGSizeMake(200*ScaleX, 200*ScaleX));
+    }];
+    [self.failImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(100*ScaleX);
+        make.top.equalTo(self.view).offset(350*ScaleX);
+        make.size.mas_equalTo(CGSizeMake(200*ScaleX, 200*ScaleX));
+    }];
+    [self xn_successAnimation];
+    
+    self.failImageView.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"getMoney01"],
+                                          [UIImage imageNamed:@"getMoney02"],
+                                          [UIImage imageNamed:@"getMoney03"],
+                                          [UIImage imageNamed:@"getMoney04"],
+                                          [UIImage imageNamed:@"getMoney05"],
+                                          [UIImage imageNamed:@"getMoney06"],
+                                          [UIImage imageNamed:@"getMoney07"],
+                                          [UIImage imageNamed:@"getMoney08"],
+                                          [UIImage imageNamed:@"getMoney09"],
+                                          [UIImage imageNamed:@"getMoney10"],
+                                          [UIImage imageNamed:@"getMoney11"],
+                                          [UIImage imageNamed:@"getMoney12"],
+                                          [UIImage imageNamed:@"getMoney13"],
+                                          [UIImage imageNamed:@"getMoney14"],
+                                          [UIImage imageNamed:@"getMoney15"],
+                                          [UIImage imageNamed:@"getMoney16"],
+                                          [UIImage imageNamed:@"getMoney17"],
+                                          [UIImage imageNamed:@"getMoney18"], nil];
+    self.failImageView.animationDuration = 1.42;
+    self.failImageView.animationRepeatCount = 0;
+    [self.failImageView startAnimating];
 }
 
+- (void)xn_successAnimation
+{
+    NSArray *imgArray = [NSArray arrayWithObjects:(__bridge id)[UIImage imageNamed:@"getMoney01"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney02"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney03"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney04"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney05"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney06"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney07"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney08"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney09"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney10"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney11"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney12"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney13"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney14"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney15"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney16"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney17"].CGImage,
+                                (__bridge id)[UIImage imageNamed:@"getMoney18"].CGImage, nil];
+    
+    NSArray *timeArray = [NSArray arrayWithObjects:@"0.1",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.2",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07",@"0.07", nil];
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
+    NSMutableArray *times = [[NSMutableArray alloc]init];
+    CGFloat currentTime = 0;
+    for (NSInteger i = 0; i <timeArray.count; i++)
+    {
+        [times addObject:[NSNumber numberWithFloat:currentTime/1.42]];
+        currentTime += [timeArray[i] floatValue];
+    }
+    animation.keyTimes = times;
+    animation.values = imgArray;
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    animation.repeatCount = HUGE_VAL;
+    animation.duration = 1.42;
+    [self.successImageView.layer addAnimation:animation forKey:@"woshinimade"];
+}
 #pragma mark - 🔄overwrite
 
 #pragma mark - 🚪public
@@ -80,6 +154,24 @@
 //        _maxMoneyView.clipsToBounds = YES;
     }
     return _maxMoneyView;
+}
+
+- (UIImageView *)successImageView
+{
+    if (!_successImageView)
+    {
+        _successImageView = [[UIImageView alloc]init];
+    }
+    return _successImageView;
+}
+
+- (UIImageView *)failImageView
+{
+    if (!_failImageView)
+    {
+        _failImageView = [[UIImageView alloc]init];
+    }
+    return _failImageView;
 }
 
 @end

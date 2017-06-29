@@ -17,5 +17,10 @@
 @property (nonatomic, assign) CGPoint startPoint;
 @property (nonatomic, assign) CGPoint endPoint;
 
-- (void)initSubViewsWithMoney:(NSString *)money;
+/**
+ 更新最新额度
+
+ @param money 最大额度
+ */
+- (void)updateMaxMoney:(NSString *)money;
 @end

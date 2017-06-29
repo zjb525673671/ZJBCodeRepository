@@ -11,6 +11,7 @@
 @interface XNGradientView ()
 
 @property (nonatomic, strong) CAGradientLayer *gradientLayer;
+@property (nonatomic, strong) UILabel *moneyLabel;
 
 @end
 
@@ -24,6 +25,7 @@
     if (self)
     {
         [self.layer addSublayer:self.gradientLayer];
+        [self xn_initSubViews];
     }
     return self;
 }
@@ -62,38 +64,35 @@
     self.gradientLayer.locations = @[@(0.0f), @(1.0f)];
 }
 
-- (void)initSubViewsWithMoney:(NSString *)money
+- (void)xn_initSubViews
 {
     UILabel *titleLabel = [[UILabel alloc]init];
     titleLabel.text = @"审核额度";
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = FontSystemSize(12*ScaleX);
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    UILabel *moneyLabel = [[UILabel alloc]init];
-    moneyLabel.text = money;
-    moneyLabel.textColor = [UIColor whiteColor];
-    moneyLabel.font = FontSystemSize(24*ScaleX);
-    moneyLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:titleLabel];
-    [self addSubview:moneyLabel];
-    
+    [self addSubview:self.moneyLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(20*ScaleX);
         make.left.right.equalTo(self);
         make.height.mas_equalTo(17*ScaleX);
     }];
-    [moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(36*ScaleX);
         make.left.right.equalTo(self);
         make.height.mas_equalTo(29*ScaleX);
     }];
 }
 
+- (void)updateMaxMoney:(NSString *)money
+{
+    self.moneyLabel.text = money;
+}
+
 #pragma mark - 🎬event response
 
 #pragma mark - ☸getter and setter
-
-
 
 - (CAGradientLayer *)gradientLayer
 {
@@ -102,6 +101,19 @@
         _gradientLayer = [[CAGradientLayer alloc]init];
     }
     return _gradientLayer;
+}
+
+- (UILabel *)moneyLabel
+{
+    if (!_moneyLabel)
+    {
+        _moneyLabel = [[UILabel alloc]init];
+        _moneyLabel.text = @"1800";
+        _moneyLabel.textColor = [UIColor whiteColor];
+        _moneyLabel.font = FontSystemSize(24*ScaleX);
+        _moneyLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _moneyLabel;
 }
 
 @end

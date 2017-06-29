@@ -19,6 +19,25 @@
 		F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB711EE2A9F500216C16 /* HomePageHeadView.m */; };
 		F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E95E51EF26D9F00E34CD1 /* XNHelper.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
+		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
+		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
+		F39E96A91F04A22000E34CD1 /* getMoney03.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96961F04A22000E34CD1 /* getMoney03.png */; };
+		F39E96AA1F04A22000E34CD1 /* getMoney04.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96971F04A22000E34CD1 /* getMoney04.png */; };
+		F39E96AB1F04A22000E34CD1 /* getMoney05.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96981F04A22000E34CD1 /* getMoney05.png */; };
+		F39E96AC1F04A22000E34CD1 /* getMoney06.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96991F04A22000E34CD1 /* getMoney06.png */; };
+		F39E96AD1F04A22000E34CD1 /* getMoney07.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E969A1F04A22000E34CD1 /* getMoney07.png */; };
+		F39E96AE1F04A22000E34CD1 /* getMoney08.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E969B1F04A22000E34CD1 /* getMoney08.png */; };
+		F39E96AF1F04A22000E34CD1 /* getMoney09.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E969C1F04A22000E34CD1 /* getMoney09.png */; };
+		F39E96B01F04A22000E34CD1 /* getMoney10.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E969D1F04A22000E34CD1 /* getMoney10.png */; };
+		F39E96B11F04A22000E34CD1 /* getMoney11.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E969E1F04A22000E34CD1 /* getMoney11.png */; };
+		F39E96B21F04A22000E34CD1 /* getMoney12.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E969F1F04A22000E34CD1 /* getMoney12.png */; };
+		F39E96B31F04A22000E34CD1 /* getMoney13.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A01F04A22000E34CD1 /* getMoney13.png */; };
+		F39E96B41F04A22000E34CD1 /* getMoney14.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A11F04A22000E34CD1 /* getMoney14.png */; };
+		F39E96B51F04A22000E34CD1 /* getMoney15.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A21F04A22000E34CD1 /* getMoney15.png */; };
+		F39E96B61F04A22000E34CD1 /* getMoney16.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A31F04A22000E34CD1 /* getMoney16.png */; };
+		F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A41F04A22000E34CD1 /* getMoney17.png */; };
+		F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A51F04A22000E34CD1 /* getMoney18.png */; };
+		F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A61F04A22000E34CD1 /* 时间轴.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +66,25 @@
 		F39E95E51EF26D9F00E34CD1 /* XNHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNHelper.m; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
+		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
+		F39E96951F04A22000E34CD1 /* getMoney02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney02.png; sourceTree = "<group>"; };
+		F39E96961F04A22000E34CD1 /* getMoney03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney03.png; sourceTree = "<group>"; };
+		F39E96971F04A22000E34CD1 /* getMoney04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney04.png; sourceTree = "<group>"; };
+		F39E96981F04A22000E34CD1 /* getMoney05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney05.png; sourceTree = "<group>"; };
+		F39E96991F04A22000E34CD1 /* getMoney06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney06.png; sourceTree = "<group>"; };
+		F39E969A1F04A22000E34CD1 /* getMoney07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney07.png; sourceTree = "<group>"; };
+		F39E969B1F04A22000E34CD1 /* getMoney08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney08.png; sourceTree = "<group>"; };
+		F39E969C1F04A22000E34CD1 /* getMoney09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney09.png; sourceTree = "<group>"; };
+		F39E969D1F04A22000E34CD1 /* getMoney10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney10.png; sourceTree = "<group>"; };
+		F39E969E1F04A22000E34CD1 /* getMoney11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney11.png; sourceTree = "<group>"; };
+		F39E969F1F04A22000E34CD1 /* getMoney12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney12.png; sourceTree = "<group>"; };
+		F39E96A01F04A22000E34CD1 /* getMoney13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney13.png; sourceTree = "<group>"; };
+		F39E96A11F04A22000E34CD1 /* getMoney14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney14.png; sourceTree = "<group>"; };
+		F39E96A21F04A22000E34CD1 /* getMoney15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney15.png; sourceTree = "<group>"; };
+		F39E96A31F04A22000E34CD1 /* getMoney16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney16.png; sourceTree = "<group>"; };
+		F39E96A41F04A22000E34CD1 /* getMoney17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney17.png; sourceTree = "<group>"; };
+		F39E96A51F04A22000E34CD1 /* getMoney18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney18.png; sourceTree = "<group>"; };
+		F39E96A61F04A22000E34CD1 /* 时间轴.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "时间轴.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +196,7 @@
 		F372AB5F1EE2A8E800216C16 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F39E96921F04A22000E34CD1 /* Source */,
 				F372AB601EE2A8E800216C16 /* Controller */,
 				F372AB611EE2A8E800216C16 /* Model */,
 				F372AB621EE2A8E800216C16 /* Presenter */,
@@ -228,6 +267,40 @@
 			path = GradientView;
 			sourceTree = "<group>";
 		};
+		F39E96921F04A22000E34CD1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F39E96931F04A22000E34CD1 /* getMoney */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F39E96931F04A22000E34CD1 /* getMoney */ = {
+			isa = PBXGroup;
+			children = (
+				F39E96941F04A22000E34CD1 /* getMoney01.png */,
+				F39E96951F04A22000E34CD1 /* getMoney02.png */,
+				F39E96961F04A22000E34CD1 /* getMoney03.png */,
+				F39E96971F04A22000E34CD1 /* getMoney04.png */,
+				F39E96981F04A22000E34CD1 /* getMoney05.png */,
+				F39E96991F04A22000E34CD1 /* getMoney06.png */,
+				F39E969A1F04A22000E34CD1 /* getMoney07.png */,
+				F39E969B1F04A22000E34CD1 /* getMoney08.png */,
+				F39E969C1F04A22000E34CD1 /* getMoney09.png */,
+				F39E969D1F04A22000E34CD1 /* getMoney10.png */,
+				F39E969E1F04A22000E34CD1 /* getMoney11.png */,
+				F39E969F1F04A22000E34CD1 /* getMoney12.png */,
+				F39E96A01F04A22000E34CD1 /* getMoney13.png */,
+				F39E96A11F04A22000E34CD1 /* getMoney14.png */,
+				F39E96A21F04A22000E34CD1 /* getMoney15.png */,
+				F39E96A31F04A22000E34CD1 /* getMoney16.png */,
+				F39E96A41F04A22000E34CD1 /* getMoney17.png */,
+				F39E96A51F04A22000E34CD1 /* getMoney18.png */,
+				F39E96A61F04A22000E34CD1 /* 时间轴.txt */,
+			);
+			path = getMoney;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,8 +362,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39E96B31F04A22000E34CD1 /* getMoney13.png in Resources */,
+				F39E96A91F04A22000E34CD1 /* getMoney03.png in Resources */,
+				F39E96B11F04A22000E34CD1 /* getMoney11.png in Resources */,
+				F39E96B21F04A22000E34CD1 /* getMoney12.png in Resources */,
+				F39E96AA1F04A22000E34CD1 /* getMoney04.png in Resources */,
 				F372AB4B1EE2A15200216C16 /* LaunchScreen.storyboard in Resources */,
+				F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */,
+				F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */,
+				F39E96B61F04A22000E34CD1 /* getMoney16.png in Resources */,
+				F39E96AB1F04A22000E34CD1 /* getMoney05.png in Resources */,
+				F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */,
+				F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */,
+				F39E96AE1F04A22000E34CD1 /* getMoney08.png in Resources */,
+				F39E96B01F04A22000E34CD1 /* getMoney10.png in Resources */,
+				F39E96B51F04A22000E34CD1 /* getMoney15.png in Resources */,
 				F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */,
+				F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */,
+				F39E96AF1F04A22000E34CD1 /* getMoney09.png in Resources */,
+				F39E96AD1F04A22000E34CD1 /* getMoney07.png in Resources */,
+				F39E96B41F04A22000E34CD1 /* getMoney14.png in Resources */,
+				F39E96AC1F04A22000E34CD1 /* getMoney06.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
