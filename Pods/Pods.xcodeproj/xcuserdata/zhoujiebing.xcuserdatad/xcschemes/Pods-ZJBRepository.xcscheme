@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87B42D2591A360C47C2AE4E8B90717A6"
+               BlueprintIdentifier = "A8F6BCCBCA450AA07D7F98E638A71470"
                BuildableName = "Pods_ZJBRepository.framework"
                BlueprintName = "Pods-ZJBRepository"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "87B42D2591A360C47C2AE4E8B90717A6"
+            BlueprintIdentifier = "A8F6BCCBCA450AA07D7F98E638A71470"
             BuildableName = "Pods_ZJBRepository.framework"
             BlueprintName = "Pods-ZJBRepository"
             ReferencedContainer = "container:Pods.xcodeproj">

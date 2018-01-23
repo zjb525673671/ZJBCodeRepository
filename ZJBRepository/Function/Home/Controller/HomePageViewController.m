@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "XNGradientView.h"
+#import "EncryptionManager.h"
 
 @interface HomePageViewController ()
 
@@ -91,6 +92,18 @@
     self.failImageView.animationDuration = 1.42;
     self.failImageView.animationRepeatCount = 0;
     [self.failImageView startAnimating];
+    NSString *str = [self ret32bitString];
+    XNLog(@"这是什么鬼?:%@",str);
+    [self xn_testEncryption];
+}
+
+- (void)xn_testEncryption
+{
+    NSString *orstr = @"9我就是你大爷大爷的?%&8@#$%!%&*()_+_=-=08";
+    NSString *encryptionStr = [EncryptionManager base64EncodedStringWithStrig:orstr];
+    XNLog(@"加密结果:%@",encryptionStr);
+    NSString *decStr = [EncryptionManager base64DecodeDataWithString:encryptionStr];
+    XNLog(@"解密结果:%@",decStr);
 }
 
 - (void)xn_successAnimation
@@ -133,7 +146,12 @@
 #pragma mark - 🔄overwrite
 
 #pragma mark - 🚪public
-
+- (NSString *)ret32bitString
+{
+    char data[32];
+    for (int x=0;x<32;data[x++] = (char)('A' + (arc4random_uniform(26))));
+    return [[NSString alloc] initWithBytes:data length:32 encoding:NSUTF8StringEncoding];
+}
 #pragma mark - 🍐delegate
 
 #pragma mark - ☎️notification

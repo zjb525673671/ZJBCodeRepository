@@ -14,6 +14,11 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - GPUImage (0.1.7)
+  - lottie-ios (2.1.5)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -23,6 +28,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - ChameleonFramework (~> 2.1.0)
+  - GPUImage (~> 0.1.7)
+  - lottie-ios (~> 2.1.5)
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
@@ -30,11 +38,14 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  lottie-ios: 836cdbba92f62f3c6a00e37a4ce485321fe317cf
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: dc1c6f40293ccbd2c08df6398050c2714aabebe3
+PODFILE CHECKSUM: 8c3dd3c1ff116e716139580bc0fe44cfd5bfbfc4
 
 COCOAPODS: 1.2.1.beta.1
