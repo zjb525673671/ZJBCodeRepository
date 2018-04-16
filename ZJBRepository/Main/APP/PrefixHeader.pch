@@ -11,19 +11,22 @@
 
 #import <Masonry/Masonry.h>
 #import "JBHelper.h"
+#import "UIFont+JB.h"
+#import "UILabel+JB.h"
+#import "JBNormalProgressHUD.h"
 
 #define MainJBScreenWidth [[UIScreen mainScreen] bounds].size.width //屏幕宽
 #define MainJBScreenHeight [[UIScreen mainScreen] bounds].size.height //屏幕高
 
 #define SX(h) h*MainJBScreenWidth/375 //屏幕的比例(以6,7的尺寸为准)
+#define JBProgressHUD [JBNormalProgressHUD sharedInstance] //全局统一的loading框
 
 //颜色 16进制 例如: JB_RGB(0x2b2b2b)
 #define JB_RGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 //带透明度颜色
 #define JB_ARGB(rgbValue, A) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:A]
-//系统字体
-#define FontSystemSize(size) [UIFont systemFontOfSize:size]
 
+//若引用
 #define WeakSelf(type)  __weak typeof(type) weak##type = type;
 
 #endif /* PrefixHeader_pch */

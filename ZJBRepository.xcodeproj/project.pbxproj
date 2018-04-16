@@ -21,6 +21,12 @@
 		F38164292084504000F96CD4 /* JBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164282084504000F96CD4 /* JBTabBarController.m */; };
 		F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642B208450BC00F96CD4 /* JBBaseTabBar.m */; };
 		F381642F2084513500F96CD4 /* JBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642E2084513500F96CD4 /* JBHelper.m */; };
+		F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F381643520847DDA00F96CD4 /* UIFont+JB.m */; };
+		F381643A20847DFD00F96CD4 /* UIColor+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F381643920847DFD00F96CD4 /* UIColor+JB.m */; };
+		F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F381643D20847EA400F96CD4 /* NSString+JB.m */; };
+		F381644220847EFA00F96CD4 /* CALayer+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F381644120847EFA00F96CD4 /* CALayer+JB.m */; };
+		F38164462084801400F96CD4 /* UILabel+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164452084801400F96CD4 /* UILabel+JB.m */; };
+		F38164492084822200F96CD4 /* JBNormalProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164482084822200F96CD4 /* JBNormalProgressHUD.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -73,6 +79,18 @@
 		F381642B208450BC00F96CD4 /* JBBaseTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBBaseTabBar.m; sourceTree = "<group>"; };
 		F381642D2084513500F96CD4 /* JBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBHelper.h; sourceTree = "<group>"; };
 		F381642E2084513500F96CD4 /* JBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBHelper.m; sourceTree = "<group>"; };
+		F381643420847DDA00F96CD4 /* UIFont+JB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+JB.h"; sourceTree = "<group>"; };
+		F381643520847DDA00F96CD4 /* UIFont+JB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+JB.m"; sourceTree = "<group>"; };
+		F381643820847DFD00F96CD4 /* UIColor+JB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JB.h"; sourceTree = "<group>"; };
+		F381643920847DFD00F96CD4 /* UIColor+JB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JB.m"; sourceTree = "<group>"; };
+		F381643C20847EA400F96CD4 /* NSString+JB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+JB.h"; sourceTree = "<group>"; };
+		F381643D20847EA400F96CD4 /* NSString+JB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JB.m"; sourceTree = "<group>"; };
+		F381644020847EFA00F96CD4 /* CALayer+JB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+JB.h"; sourceTree = "<group>"; };
+		F381644120847EFA00F96CD4 /* CALayer+JB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+JB.m"; sourceTree = "<group>"; };
+		F38164442084801400F96CD4 /* UILabel+JB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+JB.h"; sourceTree = "<group>"; };
+		F38164452084801400F96CD4 /* UILabel+JB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JB.m"; sourceTree = "<group>"; };
+		F38164472084822200F96CD4 /* JBNormalProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBNormalProgressHUD.h; sourceTree = "<group>"; };
+		F38164482084822200F96CD4 /* JBNormalProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNormalProgressHUD.m; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -146,10 +164,11 @@
 		F372AB3A1EE2A15200216C16 /* ZJBRepository */ = {
 			isa = PBXGroup;
 			children = (
-				F39E95E31EF26D6600E34CD1 /* Tools */,
 				F372AB521EE2A29B00216C16 /* Main */,
 				F372AB5E1EE2A8E800216C16 /* Function */,
 				F39E968A1F0230A300E34CD1 /* CommonUI */,
+				F381643220847DA500F96CD4 /* Categroy */,
+				F39E95E31EF26D6600E34CD1 /* Tools */,
 				F372AB3B1EE2A15200216C16 /* Supporting Files */,
 			);
 			path = ZJBRepository;
@@ -264,11 +283,70 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		F381643220847DA500F96CD4 /* Categroy */ = {
+			isa = PBXGroup;
+			children = (
+				F381644320847FED00F96CD4 /* UILabel */,
+				F381643F20847EE300F96CD4 /* Layer */,
+				F381643B20847E0300F96CD4 /* NSString */,
+				F381643720847DE400F96CD4 /* UIColor */,
+				F381643320847DB500F96CD4 /* UIFont */,
+			);
+			path = Categroy;
+			sourceTree = "<group>";
+		};
+		F381643320847DB500F96CD4 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				F381643420847DDA00F96CD4 /* UIFont+JB.h */,
+				F381643520847DDA00F96CD4 /* UIFont+JB.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		F381643720847DE400F96CD4 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				F381643820847DFD00F96CD4 /* UIColor+JB.h */,
+				F381643920847DFD00F96CD4 /* UIColor+JB.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		F381643B20847E0300F96CD4 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				F381643C20847EA400F96CD4 /* NSString+JB.h */,
+				F381643D20847EA400F96CD4 /* NSString+JB.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		F381643F20847EE300F96CD4 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F381644020847EFA00F96CD4 /* CALayer+JB.h */,
+				F381644120847EFA00F96CD4 /* CALayer+JB.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		F381644320847FED00F96CD4 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				F38164442084801400F96CD4 /* UILabel+JB.h */,
+				F38164452084801400F96CD4 /* UILabel+JB.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		F39E95E31EF26D6600E34CD1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				F381642D2084513500F96CD4 /* JBHelper.h */,
 				F381642E2084513500F96CD4 /* JBHelper.m */,
+				F38164472084822200F96CD4 /* JBNormalProgressHUD.h */,
+				F38164482084822200F96CD4 /* JBNormalProgressHUD.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -489,6 +567,8 @@
 				F372AB691EE2A95700216C16 /* HomePageViewController.m in Sources */,
 				F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */,
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
+				F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */,
+				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
 				F381642420844FD400F96CD4 /* BaseNvigationController.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
@@ -496,7 +576,11 @@
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,
 				F372AB661EE2A91500216C16 /* BaseViewController.m in Sources */,
 				F372AB3D1EE2A15200216C16 /* main.m in Sources */,
+				F38164492084822200F96CD4 /* JBNormalProgressHUD.m in Sources */,
 				F38164292084504000F96CD4 /* JBTabBarController.m in Sources */,
+				F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */,
+				F381643A20847DFD00F96CD4 /* UIColor+JB.m in Sources */,
+				F381644220847EFA00F96CD4 /* CALayer+JB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
