@@ -21,7 +21,6 @@
 		F38164292084504000F96CD4 /* JBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164282084504000F96CD4 /* JBTabBarController.m */; };
 		F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642B208450BC00F96CD4 /* JBBaseTabBar.m */; };
 		F381642F2084513500F96CD4 /* JBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642E2084513500F96CD4 /* JBHelper.m */; };
-		F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E95E51EF26D9F00E34CD1 /* XNHelper.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -42,7 +41,6 @@
 		F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A41F04A22000E34CD1 /* getMoney17.png */; };
 		F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A51F04A22000E34CD1 /* getMoney18.png */; };
 		F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A61F04A22000E34CD1 /* 时间轴.txt */; };
-		F3FB4ED92015C495005753F9 /* EncryptionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FB4ED82015C494005753F9 /* EncryptionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,8 +73,6 @@
 		F381642B208450BC00F96CD4 /* JBBaseTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBBaseTabBar.m; sourceTree = "<group>"; };
 		F381642D2084513500F96CD4 /* JBHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBHelper.h; sourceTree = "<group>"; };
 		F381642E2084513500F96CD4 /* JBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBHelper.m; sourceTree = "<group>"; };
-		F39E95E41EF26D9F00E34CD1 /* XNHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNHelper.h; sourceTree = "<group>"; };
-		F39E95E51EF26D9F00E34CD1 /* XNHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNHelper.m; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -98,8 +94,6 @@
 		F39E96A41F04A22000E34CD1 /* getMoney17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney17.png; sourceTree = "<group>"; };
 		F39E96A51F04A22000E34CD1 /* getMoney18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney18.png; sourceTree = "<group>"; };
 		F39E96A61F04A22000E34CD1 /* 时间轴.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "时间轴.txt"; sourceTree = "<group>"; };
-		F3FB4ED72015C494005753F9 /* EncryptionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptionManager.h; sourceTree = "<group>"; };
-		F3FB4ED82015C494005753F9 /* EncryptionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,12 +267,8 @@
 		F39E95E31EF26D6600E34CD1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				F39E95E41EF26D9F00E34CD1 /* XNHelper.h */,
-				F39E95E51EF26D9F00E34CD1 /* XNHelper.m */,
 				F381642D2084513500F96CD4 /* JBHelper.h */,
 				F381642E2084513500F96CD4 /* JBHelper.m */,
-				F3FB4ED72015C494005753F9 /* EncryptionManager.h */,
-				F3FB4ED82015C494005753F9 /* EncryptionManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -501,8 +491,6 @@
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
 				F381642420844FD400F96CD4 /* BaseNvigationController.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
-				F39E95E61EF26D9F00E34CD1 /* XNHelper.m in Sources */,
-				F3FB4ED92015C495005753F9 /* EncryptionManager.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
 				F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */,
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,

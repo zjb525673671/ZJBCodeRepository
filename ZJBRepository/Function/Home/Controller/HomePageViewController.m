@@ -8,7 +8,6 @@
 
 #import "HomePageViewController.h"
 #import "XNGradientView.h"
-#import "EncryptionManager.h"
 
 @interface HomePageViewController ()
 
@@ -100,9 +99,9 @@
 - (void)xn_testEncryption
 {
     NSString *orstr = @"9我就是你大爷大爷的?%&8@#$%!%&*()_+_=-=08";
-    NSString *encryptionStr = [EncryptionManager base64EncodedStringWithStrig:orstr];
+    NSString *encryptionStr = [JBHelper base64EncodedStringWithStrig:orstr];
     XNLog(@"加密结果:%@",encryptionStr);
-    NSString *decStr = [EncryptionManager base64DecodeDataWithString:encryptionStr];
+    NSString *decStr = [JBHelper base64DecodeDataWithString:encryptionStr];
     XNLog(@"解密结果:%@",decStr);
 }
 

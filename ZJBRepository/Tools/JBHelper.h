@@ -19,4 +19,20 @@
  */
 + (NSArray *)help_createImageArrayWithBaseString:(NSString *)baseString count:(NSInteger)count;
 
+/**
+ base64加密
+ 
+ @param string 原字符串
+ @return 加密字符串
+ */
++ (NSString *)base64EncodedStringWithStrig:(NSString *)string;
+
+/**
+ base64解密
+ 
+ @param string 加密字符串
+ @return 解密字符串
+ */
++ (NSString *)base64DecodeDataWithString:(NSString *)string;
+
 @end
