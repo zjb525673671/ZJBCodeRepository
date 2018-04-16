@@ -57,8 +57,8 @@
     }
     else
     {
-        self.gradientLayer.colors = @[(__bridge id)UIColorFromRGB(0xf63875).CGColor,
-                                      (__bridge id)UIColorFromRGB(0xf9603c).CGColor];
+        self.gradientLayer.colors = @[(__bridge id)JB_RGB(0xf63875).CGColor,
+                                      (__bridge id)JB_RGB(0xf9603c).CGColor];
     }
 
     self.gradientLayer.locations = @[@(0.0f), @(1.0f)];
@@ -69,19 +69,19 @@
     UILabel *titleLabel = [[UILabel alloc]init];
     titleLabel.text = @"审核额度";
     titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.font = FontSystemSize(12*ScaleX);
+    titleLabel.font = [UIFont systemFontOfSize:SX(12)];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:titleLabel];
     [self addSubview:self.moneyLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).offset(20*ScaleX);
+        make.top.equalTo(self).offset(SX(20));
         make.left.right.equalTo(self);
-        make.height.mas_equalTo(17*ScaleX);
+        make.height.mas_equalTo(SX(17));
     }];
     [self.moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).offset(36*ScaleX);
+        make.top.equalTo(self).offset(SX(36));
         make.left.right.equalTo(self);
-        make.height.mas_equalTo(29*ScaleX);
+        make.height.mas_equalTo(SX(29));
     }];
 }
 
@@ -110,7 +110,7 @@
         _moneyLabel = [[UILabel alloc]init];
         _moneyLabel.text = @"1800";
         _moneyLabel.textColor = [UIColor whiteColor];
-        _moneyLabel.font = FontSystemSize(24*ScaleX);
+        _moneyLabel.font = [UIFont systemFontOfSize:SX(24)];
         _moneyLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _moneyLabel;

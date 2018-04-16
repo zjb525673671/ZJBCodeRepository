@@ -54,20 +54,20 @@
     [self.view addSubview:self.successImageView];
     [self.view addSubview:self.failImageView];
     [self.maxMoneyView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(-8*ScaleX);
-        make.top.equalTo(self.view).offset(66*ScaleX);
-        make.size.mas_equalTo(CGSizeMake(86*ScaleX, 86*ScaleX));
+        make.left.equalTo(self.view).offset(SX(-8));
+        make.top.equalTo(self.view).offset(SX(66));
+        make.size.mas_equalTo(CGSizeMake(SX(86), SX(86)));
     }];
     [self.maxMoneyView updateMaxMoney:@"1500"];
     [self.successImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(100*ScaleX);
-        make.top.equalTo(self.view).offset(100*ScaleX);
-        make.size.mas_equalTo(CGSizeMake(200*ScaleX, 200*ScaleX));
+        make.left.equalTo(self.view).offset(SX(100));
+        make.top.equalTo(self.view).offset(SX(100));
+        make.size.mas_equalTo(CGSizeMake(SX(200), SX(200)));
     }];
     [self.failImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(100*ScaleX);
-        make.top.equalTo(self.view).offset(350*ScaleX);
-        make.size.mas_equalTo(CGSizeMake(200*ScaleX, 200*ScaleX));
+        make.left.equalTo(self.view).offset(SX(100));
+        make.top.equalTo(self.view).offset(SX(350));
+        make.size.mas_equalTo(CGSizeMake(SX(200), SX(200)));
     }];
     [self xn_successAnimation];
     
@@ -165,10 +165,10 @@
     if (!_maxMoneyView)
     {
         _maxMoneyView = [[XNGradientView alloc]init];
-        _maxMoneyView.statrColor = UIColorFromRGB(0xffe300);
-        _maxMoneyView.endColor = UIColorFromRGB(0xff9100);
-        _maxMoneyView.shadowColor = UIColorFromARGB(0xffb618, 0.5);
-//        _maxMoneyView.layer.cornerRadius = 43*ScaleX;
+        _maxMoneyView.statrColor = JB_RGB(0xffe300);
+        _maxMoneyView.endColor = JB_RGB(0xff9100);
+        _maxMoneyView.shadowColor = JB_ARGB(0xffb618, 0.5);
+//        _maxMoneyView.layer.cornerRadius = SX(43);
 //        _maxMoneyView.clipsToBounds = YES;
     }
     return _maxMoneyView;

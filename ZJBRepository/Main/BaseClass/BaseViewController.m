@@ -46,7 +46,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = YES;
 //    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18*ScaleX], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:SX(18)], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     if (self.navigationController.childViewControllers.count > 1)
     {
         [self xn_setLeftBarButtonItemWithImageName:@"navition_back"];
@@ -161,7 +161,7 @@
     if (!_rightBarButton)
     {
         _rightBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _rightBarButton.titleLabel.font = FontSystemSize(16*ScaleX);
+        _rightBarButton.titleLabel.font = [UIFont systemFontOfSize:SX(16)];
         [_rightBarButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_rightBarButton sizeToFit];
         [_rightBarButton addTarget:self action:@selector(rightBarButtonAction) forControlEvents:UIControlEventTouchUpInside];
