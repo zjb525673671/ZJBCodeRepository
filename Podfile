@@ -1,6 +1,6 @@
 workspace ‘ZJBRepository.xcworkspace'
 use_frameworks!
-platform :ios, ‘8.0’
+platform :ios, ‘9.0’
 
 def shared_pods
     pod 'Masonry', '~> 1.0.2’
