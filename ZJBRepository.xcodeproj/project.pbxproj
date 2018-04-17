@@ -17,7 +17,6 @@
 		F372AB6C1EE2A9B300216C16 /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB6B1EE2A9B300216C16 /* HomePageModel.m */; };
 		F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB6E1EE2A9CB00216C16 /* HomePagePresenter.m */; };
 		F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB711EE2A9F500216C16 /* HomePageHeadView.m */; };
-		F381642420844FD400F96CD4 /* BaseNvigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642320844FD400F96CD4 /* BaseNvigationController.m */; };
 		F38164292084504000F96CD4 /* JBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164282084504000F96CD4 /* JBTabBarController.m */; };
 		F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642B208450BC00F96CD4 /* JBBaseTabBar.m */; };
 		F381642F2084513500F96CD4 /* JBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F381642E2084513500F96CD4 /* JBHelper.m */; };
@@ -27,6 +26,10 @@
 		F381644220847EFA00F96CD4 /* CALayer+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F381644120847EFA00F96CD4 /* CALayer+JB.m */; };
 		F38164462084801400F96CD4 /* UILabel+JB.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164452084801400F96CD4 /* UILabel+JB.m */; };
 		F38164492084822200F96CD4 /* JBNormalProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164482084822200F96CD4 /* JBNormalProgressHUD.m */; };
+		F38164512085DD8500F96CD4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164502085DD8500F96CD4 /* LoginViewController.m */; };
+		F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164532085E3C600F96CD4 /* BaseNavigationController.m */; };
+		F38164582085E81D00F96CD4 /* JBNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164572085E81D00F96CD4 /* JBNotification.m */; };
+		F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645A2085E88400F96CD4 /* LoginUserInfoModel.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -71,8 +74,6 @@
 		F372AB701EE2A9F500216C16 /* HomePageHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeadView.h; sourceTree = "<group>"; };
 		F372AB711EE2A9F500216C16 /* HomePageHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeadView.m; sourceTree = "<group>"; };
 		F372AB731EE2AF7500216C16 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		F381642220844FD400F96CD4 /* BaseNvigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNvigationController.h; sourceTree = "<group>"; };
-		F381642320844FD400F96CD4 /* BaseNvigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNvigationController.m; sourceTree = "<group>"; };
 		F38164272084504000F96CD4 /* JBTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBTabBarController.h; sourceTree = "<group>"; };
 		F38164282084504000F96CD4 /* JBTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBTabBarController.m; sourceTree = "<group>"; };
 		F381642A208450BC00F96CD4 /* JBBaseTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBBaseTabBar.h; sourceTree = "<group>"; };
@@ -91,6 +92,14 @@
 		F38164452084801400F96CD4 /* UILabel+JB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JB.m"; sourceTree = "<group>"; };
 		F38164472084822200F96CD4 /* JBNormalProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBNormalProgressHUD.h; sourceTree = "<group>"; };
 		F38164482084822200F96CD4 /* JBNormalProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNormalProgressHUD.m; sourceTree = "<group>"; };
+		F381644F2085DD8500F96CD4 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F38164502085DD8500F96CD4 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F38164522085E3C600F96CD4 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		F38164532085E3C600F96CD4 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		F38164562085E81D00F96CD4 /* JBNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBNotification.h; sourceTree = "<group>"; };
+		F38164572085E81D00F96CD4 /* JBNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNotification.m; sourceTree = "<group>"; };
+		F38164592085E88400F96CD4 /* LoginUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginUserInfoModel.h; sourceTree = "<group>"; };
+		F381645A2085E88400F96CD4 /* LoginUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginUserInfoModel.m; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -188,6 +197,7 @@
 		F372AB521EE2A29B00216C16 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F38164552085E7C800F96CD4 /* Notification */,
 				F372AB591EE2A87A00216C16 /* APP */,
 				F372AB5C1EE2A87A00216C16 /* BaseClass */,
 			);
@@ -209,8 +219,8 @@
 			children = (
 				F372AB641EE2A91500216C16 /* BaseViewController.h */,
 				F372AB651EE2A91500216C16 /* BaseViewController.m */,
-				F381642220844FD400F96CD4 /* BaseNvigationController.h */,
-				F381642320844FD400F96CD4 /* BaseNvigationController.m */,
+				F38164522085E3C600F96CD4 /* BaseNavigationController.h */,
+				F38164532085E3C600F96CD4 /* BaseNavigationController.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -219,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				F38164262084500600F96CD4 /* TabBar */,
+				F381644A2085DCEC00F96CD4 /* Login */,
 				F372AB5F1EE2A8E800216C16 /* Home */,
 			);
 			path = Function;
@@ -338,6 +349,58 @@
 				F38164452084801400F96CD4 /* UILabel+JB.m */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		F381644A2085DCEC00F96CD4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F381644B2085DCFF00F96CD4 /* Controller */,
+				F381644C2085DD0600F96CD4 /* Presenter */,
+				F381644D2085DD1000F96CD4 /* Model */,
+				F381644E2085DD1F00F96CD4 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F381644B2085DCFF00F96CD4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F381644F2085DD8500F96CD4 /* LoginViewController.h */,
+				F38164502085DD8500F96CD4 /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F381644C2085DD0600F96CD4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F381644D2085DD1000F96CD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F38164592085E88400F96CD4 /* LoginUserInfoModel.h */,
+				F381645A2085E88400F96CD4 /* LoginUserInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F381644E2085DD1F00F96CD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38164552085E7C800F96CD4 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				F38164562085E81D00F96CD4 /* JBNotification.h */,
+				F38164572085E81D00F96CD4 /* JBNotification.m */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		F39E95E31EF26D6600E34CD1 /* Tools */ = {
@@ -565,11 +628,13 @@
 			files = (
 				F372AB6C1EE2A9B300216C16 /* HomePageModel.m in Sources */,
 				F372AB691EE2A95700216C16 /* HomePageViewController.m in Sources */,
+				F38164582085E81D00F96CD4 /* JBNotification.m in Sources */,
 				F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */,
+				F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */,
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
 				F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */,
 				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
-				F381642420844FD400F96CD4 /* BaseNvigationController.m in Sources */,
+				F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
 				F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */,
@@ -578,6 +643,7 @@
 				F372AB3D1EE2A15200216C16 /* main.m in Sources */,
 				F38164492084822200F96CD4 /* JBNormalProgressHUD.m in Sources */,
 				F38164292084504000F96CD4 /* JBTabBarController.m in Sources */,
+				F38164512085DD8500F96CD4 /* LoginViewController.m in Sources */,
 				F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */,
 				F381643A20847DFD00F96CD4 /* UIColor+JB.m in Sources */,
 				F381644220847EFA00F96CD4 /* CALayer+JB.m in Sources */,
