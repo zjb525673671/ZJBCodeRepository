@@ -30,6 +30,8 @@
 		F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164532085E3C600F96CD4 /* BaseNavigationController.m */; };
 		F38164582085E81D00F96CD4 /* JBNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164572085E81D00F96CD4 /* JBNotification.m */; };
 		F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645A2085E88400F96CD4 /* LoginUserInfoModel.m */; };
+		F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645D2086EF3E00F96CD4 /* JBGravityManager.m */; };
+		F38164642086F1FC00F96CD4 /* JBGravityImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164632086F1FC00F96CD4 /* JBGravityImageView.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -100,6 +102,10 @@
 		F38164572085E81D00F96CD4 /* JBNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNotification.m; sourceTree = "<group>"; };
 		F38164592085E88400F96CD4 /* LoginUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginUserInfoModel.h; sourceTree = "<group>"; };
 		F381645A2085E88400F96CD4 /* LoginUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginUserInfoModel.m; sourceTree = "<group>"; };
+		F381645C2086EF3E00F96CD4 /* JBGravityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBGravityManager.h; sourceTree = "<group>"; };
+		F381645D2086EF3E00F96CD4 /* JBGravityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBGravityManager.m; sourceTree = "<group>"; };
+		F38164622086F1FC00F96CD4 /* JBGravityImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBGravityImageView.h; sourceTree = "<group>"; };
+		F38164632086F1FC00F96CD4 /* JBGravityImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBGravityImageView.m; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 		F372AB5E1EE2A8E800216C16 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				F38164602086EFA600F96CD4 /* Me */,
+				F381645F2086EF9700F96CD4 /* Life */,
 				F38164262084500600F96CD4 /* TabBar */,
 				F381644A2085DCEC00F96CD4 /* Login */,
 				F372AB5F1EE2A8E800216C16 /* Home */,
@@ -403,6 +411,29 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		F381645F2086EF9700F96CD4 /* Life */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Life;
+			sourceTree = "<group>";
+		};
+		F38164602086EFA600F96CD4 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		F38164612086F1C600F96CD4 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F38164622086F1FC00F96CD4 /* JBGravityImageView.h */,
+				F38164632086F1FC00F96CD4 /* JBGravityImageView.m */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		F39E95E31EF26D6600E34CD1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +441,8 @@
 				F381642E2084513500F96CD4 /* JBHelper.m */,
 				F38164472084822200F96CD4 /* JBNormalProgressHUD.h */,
 				F38164482084822200F96CD4 /* JBNormalProgressHUD.m */,
+				F381645C2086EF3E00F96CD4 /* JBGravityManager.h */,
+				F381645D2086EF3E00F96CD4 /* JBGravityManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -417,6 +450,7 @@
 		F39E968A1F0230A300E34CD1 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				F38164612086F1C600F96CD4 /* UIImageView */,
 				F39E968B1F0230FB00E34CD1 /* GradientView */,
 			);
 			path = CommonUI;
@@ -627,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F372AB6C1EE2A9B300216C16 /* HomePageModel.m in Sources */,
+				F38164642086F1FC00F96CD4 /* JBGravityImageView.m in Sources */,
 				F372AB691EE2A95700216C16 /* HomePageViewController.m in Sources */,
 				F38164582085E81D00F96CD4 /* JBNotification.m in Sources */,
 				F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */,
@@ -636,6 +671,7 @@
 				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
 				F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
+				F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
 				F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */,
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,

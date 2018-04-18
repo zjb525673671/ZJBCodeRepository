@@ -10,6 +10,9 @@
 
 @interface LoginViewController ()
 
+@property (nonatomic, strong) UIImageView *backImageView;
+
+
 @end
 
 @implementation LoginViewController
@@ -40,7 +43,11 @@
 
 - (void)xn_initData
 {
-    
+    [self.view addSubview:self.backImageView];
+    [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    self.backImageView.image = [UIImage imageNamed:@"login_back_image"];
 }
 
 - (void)xn_initSubViews
@@ -62,5 +69,13 @@
 
 #pragma mark - ☸getter and setter
 
+- (UIImageView *)backImageView
+{
+    if (!_backImageView)
+    {
+        _backImageView = [[UIImageView alloc]init];
+    }
+    return _backImageView;
+}
 
 @end
