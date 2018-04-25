@@ -9,6 +9,7 @@
 #import "HomePageViewController.h"
 #import "XNGradientView.h"
 #import "JBGravityImageView.h"
+#import <Lottie/Lottie.h>
 
 @interface HomePageViewController ()
 
@@ -52,9 +53,22 @@
 
 - (void)xn_initSubViews
 {
-    [self.view addSubview:self.moveImageView];
-    self.moveImageView.image = [UIImage imageNamed:@"login_back_image "];
-    [self.moveImageView startAnimate];
+    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"data"];
+    animation.frame = CGRectMake(MainJBScreenWidth/2.0 - 125, 200, 250, 75);
+//    animation.animationSpeed = 0.5;
+    [self.view addSubview:animation];
+    animation.loopAnimation = YES;
+//    [animation play];
+    
+//    LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"Lottie"];
+//    animationView.frame = CGRectMake(100, 200, 100, 200);
+//    animationView.contentMode = UIViewContentModeScaleToFill;
+//    animationView.animationSpeed = 1.2;
+//    [self.view addSubview:animationView];
+
+//    [self.view addSubview:self.moveImageView];
+//    self.moveImageView.image = [UIImage imageNamed:@"login_back_image "];
+//    [self.moveImageView startAnimate];
 //    [self.view addSubview:self.maxMoneyView];
 //    [self.view addSubview:self.successImageView];
 //    [self.view addSubview:self.failImageView];
