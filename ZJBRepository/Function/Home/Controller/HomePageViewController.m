@@ -53,11 +53,11 @@
 
 - (void)xn_initSubViews
 {
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"data"];
-    animation.frame = CGRectMake(MainJBScreenWidth/2.0 - 125, 200, 250, 75);
+//    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"data"];
+//    animation.frame = CGRectMake(MainJBScreenWidth/2.0 - 125, 200, 250, 75);
 //    animation.animationSpeed = 0.5;
-    [self.view addSubview:animation];
-    animation.loopAnimation = YES;
+//    [self.view addSubview:animation];
+//    animation.loopAnimation = YES;
 //    [animation play];
     
 //    LOTAnimationView *animationView = [LOTAnimationView animationNamed:@"Lottie"];
@@ -66,54 +66,54 @@
 //    animationView.animationSpeed = 1.2;
 //    [self.view addSubview:animationView];
 
-//    [self.view addSubview:self.moveImageView];
-//    self.moveImageView.image = [UIImage imageNamed:@"login_back_image "];
-//    [self.moveImageView startAnimate];
-//    [self.view addSubview:self.maxMoneyView];
-//    [self.view addSubview:self.successImageView];
-//    [self.view addSubview:self.failImageView];
-//    [self.maxMoneyView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view).offset(SX(-8));
-//        make.top.equalTo(self.view).offset(SX(66));
-//        make.size.mas_equalTo(CGSizeMake(SX(86), SX(86)));
-//    }];
-//    [self.maxMoneyView updateMaxMoney:@"1500"];
-//    [self.successImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view).offset(SX(100));
-//        make.top.equalTo(self.view).offset(SX(100));
-//        make.size.mas_equalTo(CGSizeMake(SX(200), SX(200)));
-//    }];
-//    [self.failImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view).offset(SX(100));
-//        make.top.equalTo(self.view).offset(SX(350));
-//        make.size.mas_equalTo(CGSizeMake(SX(200), SX(200)));
-//    }];
-//    [self xn_successAnimation];
-//
-//    self.failImageView.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"getMoney01"],
-//                                          [UIImage imageNamed:@"getMoney02"],
-//                                          [UIImage imageNamed:@"getMoney03"],
-//                                          [UIImage imageNamed:@"getMoney04"],
-//                                          [UIImage imageNamed:@"getMoney05"],
-//                                          [UIImage imageNamed:@"getMoney06"],
-//                                          [UIImage imageNamed:@"getMoney07"],
-//                                          [UIImage imageNamed:@"getMoney08"],
-//                                          [UIImage imageNamed:@"getMoney09"],
-//                                          [UIImage imageNamed:@"getMoney10"],
-//                                          [UIImage imageNamed:@"getMoney11"],
-//                                          [UIImage imageNamed:@"getMoney12"],
-//                                          [UIImage imageNamed:@"getMoney13"],
-//                                          [UIImage imageNamed:@"getMoney14"],
-//                                          [UIImage imageNamed:@"getMoney15"],
-//                                          [UIImage imageNamed:@"getMoney16"],
-//                                          [UIImage imageNamed:@"getMoney17"],
-//                                          [UIImage imageNamed:@"getMoney18"], nil];
-//    self.failImageView.animationDuration = 1.42;
-//    self.failImageView.animationRepeatCount = 0;
-//    [self.failImageView startAnimating];
-//    NSString *str = [self ret32bitString];
-//    XNLog(@"这是什么鬼?:%@",str);
-//    [self xn_testEncryption];
+    [self.view addSubview:self.moveImageView];
+    self.moveImageView.image = [UIImage imageNamed:@"login_back_image "];
+    [self.moveImageView startAnimate];
+    [self.view addSubview:self.maxMoneyView];
+    [self.view addSubview:self.successImageView];
+    [self.view addSubview:self.failImageView];
+    [self.maxMoneyView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(SX(-8));
+        make.top.equalTo(self.view).offset(SX(66));
+        make.size.mas_equalTo(CGSizeMake(SX(86), SX(86)));
+    }];
+    [self.maxMoneyView updateMaxMoney:@"1500"];
+    [self.successImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(SX(100));
+        make.top.equalTo(self.view).offset(SX(100));
+        make.size.mas_equalTo(CGSizeMake(SX(200), SX(200)));
+    }];
+    [self.failImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(SX(100));
+        make.top.equalTo(self.view).offset(SX(350));
+        make.size.mas_equalTo(CGSizeMake(SX(200), SX(200)));
+    }];
+    [self xn_successAnimation];
+
+    self.failImageView.animationImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"getMoney01"],
+                                          [UIImage imageNamed:@"getMoney02"],
+                                          [UIImage imageNamed:@"getMoney03"],
+                                          [UIImage imageNamed:@"getMoney04"],
+                                          [UIImage imageNamed:@"getMoney05"],
+                                          [UIImage imageNamed:@"getMoney06"],
+                                          [UIImage imageNamed:@"getMoney07"],
+                                          [UIImage imageNamed:@"getMoney08"],
+                                          [UIImage imageNamed:@"getMoney09"],
+                                          [UIImage imageNamed:@"getMoney10"],
+                                          [UIImage imageNamed:@"getMoney11"],
+                                          [UIImage imageNamed:@"getMoney12"],
+                                          [UIImage imageNamed:@"getMoney13"],
+                                          [UIImage imageNamed:@"getMoney14"],
+                                          [UIImage imageNamed:@"getMoney15"],
+                                          [UIImage imageNamed:@"getMoney16"],
+                                          [UIImage imageNamed:@"getMoney17"],
+                                          [UIImage imageNamed:@"getMoney18"], nil];
+    self.failImageView.animationDuration = 1.42;
+    self.failImageView.animationRepeatCount = 0;
+    [self.failImageView startAnimating];
+    NSString *str = [self ret32bitString];
+    XNLog(@"这是什么鬼?:%@",str);
+    [self xn_testEncryption];
 }
 
 - (void)xn_testEncryption

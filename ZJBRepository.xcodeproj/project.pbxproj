@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		752CCBC1DBA146A6D3B5279A /* Pods_ZJBRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */; };
-		F3245419208DC7800012BD35 /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = F3245416208DC7800012BD35 /* img_0.png */; };
-		F324541B208DC7800012BD35 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = F3245418208DC7800012BD35 /* Thumbs.db */; };
-		F324541D208DC7A90012BD35 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F324541C208DC7A80012BD35 /* data.json */; };
 		F372AB3D1EE2A15200216C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB3C1EE2A15200216C16 /* main.m */; };
 		F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F372AB471EE2A15200216C16 /* Assets.xcassets */; };
 		F372AB4B1EE2A15200216C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F372AB491EE2A15200216C16 /* LaunchScreen.storyboard */; };
@@ -55,17 +52,12 @@
 		F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A41F04A22000E34CD1 /* getMoney17.png */; };
 		F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A51F04A22000E34CD1 /* getMoney18.png */; };
 		F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A61F04A22000E34CD1 /* 时间轴.txt */; };
-		F3E980DC2089D21B008A2858 /* animationData.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E980DB2089D21B008A2858 /* animationData.json */; };
-		F3E980DE2089D5E4008A2858 /* loadingData.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E980DD2089D5E4008A2858 /* loadingData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05DB67202032BA57E9EA128A /* Pods-ZJBRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJBRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DF9F81997D657169BF7DD2 /* Pods-ZJBRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository.release.xcconfig"; sourceTree = "<group>"; };
-		F3245416208DC7800012BD35 /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
-		F3245418208DC7800012BD35 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
-		F324541C208DC7A80012BD35 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		F372AB381EE2A15200216C16 /* ZJBRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJBRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F372AB3C1EE2A15200216C16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F372AB471EE2A15200216C16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,8 +127,6 @@
 		F39E96A41F04A22000E34CD1 /* getMoney17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney17.png; sourceTree = "<group>"; };
 		F39E96A51F04A22000E34CD1 /* getMoney18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney18.png; sourceTree = "<group>"; };
 		F39E96A61F04A22000E34CD1 /* 时间轴.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "时间轴.txt"; sourceTree = "<group>"; };
-		F3E980DB2089D21B008A2858 /* animationData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animationData.json; sourceTree = "<group>"; };
-		F3E980DD2089D5E4008A2858 /* loadingData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,16 +156,6 @@
 				B9DF9F81997D657169BF7DD2 /* Pods-ZJBRepository.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		F3245415208DC7800012BD35 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				F3245416208DC7800012BD35 /* img_0.png */,
-				F3245418208DC7800012BD35 /* Thumbs.db */,
-			);
-			name = images;
-			path = "../../../../../../../../../Volumes/g/惠花花1.3.0/数字移动动效/2/images";
 			sourceTree = "<group>";
 		};
 		F372AB2F1EE2A15200216C16 = {
@@ -280,10 +260,6 @@
 			children = (
 				F372AB671EE2A95700216C16 /* HomePageViewController.h */,
 				F372AB681EE2A95700216C16 /* HomePageViewController.m */,
-				F3E980DB2089D21B008A2858 /* animationData.json */,
-				F3E980DD2089D5E4008A2858 /* loadingData.json */,
-				F324541C208DC7A80012BD35 /* data.json */,
-				F3245415208DC7800012BD35 /* images */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -596,19 +572,14 @@
 				F39E96B61F04A22000E34CD1 /* getMoney16.png in Resources */,
 				F39E96AB1F04A22000E34CD1 /* getMoney05.png in Resources */,
 				F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */,
-				F3E980DC2089D21B008A2858 /* animationData.json in Resources */,
 				F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */,
 				F39E96AE1F04A22000E34CD1 /* getMoney08.png in Resources */,
 				F39E96B01F04A22000E34CD1 /* getMoney10.png in Resources */,
-				F324541D208DC7A90012BD35 /* data.json in Resources */,
 				F39E96B51F04A22000E34CD1 /* getMoney15.png in Resources */,
 				F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */,
 				F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */,
 				F39E96AF1F04A22000E34CD1 /* getMoney09.png in Resources */,
-				F3245419208DC7800012BD35 /* img_0.png in Resources */,
 				F39E96AD1F04A22000E34CD1 /* getMoney07.png in Resources */,
-				F3E980DE2089D5E4008A2858 /* loadingData.json in Resources */,
-				F324541B208DC7800012BD35 /* Thumbs.db in Resources */,
 				F39E96B41F04A22000E34CD1 /* getMoney14.png in Resources */,
 				F39E96AC1F04A22000E34CD1 /* getMoney06.png in Resources */,
 			);
