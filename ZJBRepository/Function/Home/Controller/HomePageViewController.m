@@ -48,6 +48,7 @@
 - (void)xn_initData
 {
     self.title = @"首页";
+    [[JBNetWorkManager shareInstance] requestBaiDu];
     
 }
 

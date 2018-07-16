@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import <Masonry/Masonry.h>
+#import "JBNetWorkManager.h"
 #import "JBHelper.h"
 #import "UIFont+JB.h"
 #import "UILabel+JB.h"

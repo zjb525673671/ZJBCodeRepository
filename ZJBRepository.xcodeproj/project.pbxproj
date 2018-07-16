@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		752CCBC1DBA146A6D3B5279A /* Pods_ZJBRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */; };
+		F342AA2420E37E8C00AF8DF3 /* JBNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */; };
 		F372AB3D1EE2A15200216C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB3C1EE2A15200216C16 /* main.m */; };
 		F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F372AB471EE2A15200216C16 /* Assets.xcassets */; };
 		F372AB4B1EE2A15200216C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F372AB491EE2A15200216C16 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,8 @@
 		05DB67202032BA57E9EA128A /* Pods-ZJBRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJBRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DF9F81997D657169BF7DD2 /* Pods-ZJBRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository.release.xcconfig"; sourceTree = "<group>"; };
+		F342AA2220E37E8C00AF8DF3 /* JBNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBNetWorkManager.h; sourceTree = "<group>"; };
+		F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNetWorkManager.m; sourceTree = "<group>"; };
 		F372AB381EE2A15200216C16 /* ZJBRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJBRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F372AB3C1EE2A15200216C16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F372AB471EE2A15200216C16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				F38164482084822200F96CD4 /* JBNormalProgressHUD.m */,
 				F381645C2086EF3E00F96CD4 /* JBGravityManager.h */,
 				F381645D2086EF3E00F96CD4 /* JBGravityManager.m */,
+				F342AA2220E37E8C00AF8DF3 /* JBNetWorkManager.h */,
+				F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -626,6 +632,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -666,6 +673,7 @@
 				F38164582085E81D00F96CD4 /* JBNotification.m in Sources */,
 				F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */,
 				F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */,
+				F342AA2420E37E8C00AF8DF3 /* JBNetWorkManager.m in Sources */,
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
 				F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */,
 				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
