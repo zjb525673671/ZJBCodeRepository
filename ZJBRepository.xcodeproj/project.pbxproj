@@ -53,6 +53,8 @@
 		F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A41F04A22000E34CD1 /* getMoney17.png */; };
 		F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A51F04A22000E34CD1 /* getMoney18.png */; };
 		F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A61F04A22000E34CD1 /* 时间轴.txt */; };
+		F3E89B8220FC80AB00EC8526 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */; };
+		F3E89B8420FC80BC00EC8526 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +132,8 @@
 		F39E96A41F04A22000E34CD1 /* getMoney17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney17.png; sourceTree = "<group>"; };
 		F39E96A51F04A22000E34CD1 /* getMoney18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney18.png; sourceTree = "<group>"; };
 		F39E96A61F04A22000E34CD1 /* 时间轴.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "时间轴.txt"; sourceTree = "<group>"; };
+		F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E89B8420FC80BC00EC8526 /* libsqlite3.tbd in Frameworks */,
+				F3E89B8220FC80AB00EC8526 /* libsqlite3.0.tbd in Frameworks */,
 				752CCBC1DBA146A6D3B5279A /* Pods_ZJBRepository.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +153,8 @@
 		4A1D5FC5981D90714F11621E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */,
+				F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */,
 				066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */,
 			);
 			name = Frameworks;

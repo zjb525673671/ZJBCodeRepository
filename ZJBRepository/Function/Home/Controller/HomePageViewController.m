@@ -10,6 +10,7 @@
 #import "XNGradientView.h"
 #import "JBGravityImageView.h"
 #import <Lottie/Lottie.h>
+#import "HomePagePresenter.h"
 
 @interface HomePageViewController ()
 
@@ -17,6 +18,7 @@
 @property (nonatomic, strong) UIImageView *successImageView;
 @property (nonatomic, strong) UIImageView *failImageView;
 @property (nonatomic, strong) JBGravityImageView *moveImageView;
+@property (nonatomic, strong) HomePagePresenter *presenter;
 
 @end
 
@@ -48,8 +50,9 @@
 - (void)xn_initData
 {
     self.title = @"首页";
-    [[JBNetWorkManager shareInstance] requestBaiDu];
+//    [[JBNetWorkManager shareInstance] requestBaiDu];
     
+//    [self.presenter FMDB_createTable:@"myFirstDB"];
 }
 
 - (void)xn_initSubViews
@@ -219,6 +222,13 @@
         _moveImageView = [[JBGravityImageView alloc]initWithFrame:self.view.bounds];
     }
     return _moveImageView;
+}
+
+- (HomePagePresenter *)presenter {
+    if (!_presenter) {
+        _presenter = [[HomePagePresenter alloc]init];
+    }
+    return _presenter;
 }
 
 @end

@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FMDB/FMDB.h>
+#import <sqlite3.h>
 
 @interface HomePagePresenter : NSObject
+
+@property (nonatomic, strong) FMDatabase *testDB;
+
+/**
+ 创建新的表
+
+ @param DBName 标的名字
+ */
+- (void)FMDB_createTable:(NSString *)DBName;
 
 @end
