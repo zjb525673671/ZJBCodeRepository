@@ -33,6 +33,7 @@
 		F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645A2085E88400F96CD4 /* LoginUserInfoModel.m */; };
 		F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645D2086EF3E00F96CD4 /* JBGravityManager.m */; };
 		F38164642086F1FC00F96CD4 /* JBGravityImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164632086F1FC00F96CD4 /* JBGravityImageView.m */; };
+		F386FADB214FA6BE00F24E6A /* UIButton+PC.m in Sources */ = {isa = PBXBuildFile; fileRef = F386FADA214FA6BE00F24E6A /* UIButton+PC.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -53,6 +54,13 @@
 		F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A41F04A22000E34CD1 /* getMoney17.png */; };
 		F39E96B81F04A22000E34CD1 /* getMoney18.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A51F04A22000E34CD1 /* getMoney18.png */; };
 		F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */ = {isa = PBXBuildFile; fileRef = F39E96A61F04A22000E34CD1 /* 时间轴.txt */; };
+		F3A695D7215249D100328EB7 /* JBCycleBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695D6215249D100328EB7 /* JBCycleBannerView.m */; };
+		F3A695E721524D9600328EB7 /* MDBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695DD21524D9600328EB7 /* MDBannerCollectionViewCell.m */; };
+		F3A695E821524D9600328EB7 /* MDBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A695DE21524D9600328EB7 /* MDBannerCollectionViewCell.xib */; };
+		F3A695E921524D9600328EB7 /* MDBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E021524D9600328EB7 /* MDBannerModel.m */; };
+		F3A695EA21524D9600328EB7 /* MDMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E221524D9600328EB7 /* MDMaskView.m */; };
+		F3A695EB21524D9600328EB7 /* MDShockBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E421524D9600328EB7 /* MDShockBannerView.m */; };
+		F3A695EC21524D9600328EB7 /* UIView+MD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E621524D9600328EB7 /* UIView+MD.m */; };
 		F3E89B8220FC80AB00EC8526 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */; };
 		F3E89B8420FC80BC00EC8526 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
@@ -111,6 +119,8 @@
 		F381645D2086EF3E00F96CD4 /* JBGravityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBGravityManager.m; sourceTree = "<group>"; };
 		F38164622086F1FC00F96CD4 /* JBGravityImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBGravityImageView.h; sourceTree = "<group>"; };
 		F38164632086F1FC00F96CD4 /* JBGravityImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBGravityImageView.m; sourceTree = "<group>"; };
+		F386FAD9214FA6BE00F24E6A /* UIButton+PC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+PC.h"; sourceTree = "<group>"; };
+		F386FADA214FA6BE00F24E6A /* UIButton+PC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+PC.m"; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -132,6 +142,19 @@
 		F39E96A41F04A22000E34CD1 /* getMoney17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney17.png; sourceTree = "<group>"; };
 		F39E96A51F04A22000E34CD1 /* getMoney18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney18.png; sourceTree = "<group>"; };
 		F39E96A61F04A22000E34CD1 /* 时间轴.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "时间轴.txt"; sourceTree = "<group>"; };
+		F3A695D5215249D100328EB7 /* JBCycleBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBCycleBannerView.h; sourceTree = "<group>"; };
+		F3A695D6215249D100328EB7 /* JBCycleBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBCycleBannerView.m; sourceTree = "<group>"; };
+		F3A695DC21524D9600328EB7 /* MDBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		F3A695DD21524D9600328EB7 /* MDBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		F3A695DE21524D9600328EB7 /* MDBannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		F3A695DF21524D9600328EB7 /* MDBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDBannerModel.h; sourceTree = "<group>"; };
+		F3A695E021524D9600328EB7 /* MDBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDBannerModel.m; sourceTree = "<group>"; };
+		F3A695E121524D9600328EB7 /* MDMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMaskView.h; sourceTree = "<group>"; };
+		F3A695E221524D9600328EB7 /* MDMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMaskView.m; sourceTree = "<group>"; };
+		F3A695E321524D9600328EB7 /* MDShockBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDShockBannerView.h; sourceTree = "<group>"; };
+		F3A695E421524D9600328EB7 /* MDShockBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDShockBannerView.m; sourceTree = "<group>"; };
+		F3A695E521524D9600328EB7 /* UIView+MD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MD.h"; sourceTree = "<group>"; };
+		F3A695E621524D9600328EB7 /* UIView+MD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MD.m"; sourceTree = "<group>"; };
 		F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -316,6 +339,7 @@
 		F381643220847DA500F96CD4 /* Categroy */ = {
 			isa = PBXGroup;
 			children = (
+				F386FAD8214FA66300F24E6A /* UIButton */,
 				F381644320847FED00F96CD4 /* UILabel */,
 				F381643F20847EE300F96CD4 /* Layer */,
 				F381643B20847E0300F96CD4 /* NSString */,
@@ -445,6 +469,22 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		F386FAD4214F9F9F00F24E6A /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		F386FAD8214FA66300F24E6A /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				F386FAD9214FA6BE00F24E6A /* UIButton+PC.h */,
+				F386FADA214FA6BE00F24E6A /* UIButton+PC.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		F39E95E31EF26D6600E34CD1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +503,9 @@
 		F39E968A1F0230A300E34CD1 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				F3A695DB21524D9600328EB7 /* MDShockBanner */,
+				F3A695D42152490D00328EB7 /* Banner */,
+				F386FAD4214F9F9F00F24E6A /* UILabel */,
 				F38164612086F1C600F96CD4 /* UIImageView */,
 				F39E968B1F0230FB00E34CD1 /* GradientView */,
 			);
@@ -510,6 +553,33 @@
 				F39E96A61F04A22000E34CD1 /* 时间轴.txt */,
 			);
 			path = getMoney;
+			sourceTree = "<group>";
+		};
+		F3A695D42152490D00328EB7 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				F3A695D5215249D100328EB7 /* JBCycleBannerView.h */,
+				F3A695D6215249D100328EB7 /* JBCycleBannerView.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		F3A695DB21524D9600328EB7 /* MDShockBanner */ = {
+			isa = PBXGroup;
+			children = (
+				F3A695DC21524D9600328EB7 /* MDBannerCollectionViewCell.h */,
+				F3A695DD21524D9600328EB7 /* MDBannerCollectionViewCell.m */,
+				F3A695DE21524D9600328EB7 /* MDBannerCollectionViewCell.xib */,
+				F3A695DF21524D9600328EB7 /* MDBannerModel.h */,
+				F3A695E021524D9600328EB7 /* MDBannerModel.m */,
+				F3A695E121524D9600328EB7 /* MDMaskView.h */,
+				F3A695E221524D9600328EB7 /* MDMaskView.m */,
+				F3A695E321524D9600328EB7 /* MDShockBannerView.h */,
+				F3A695E421524D9600328EB7 /* MDShockBannerView.m */,
+				F3A695E521524D9600328EB7 /* UIView+MD.h */,
+				F3A695E621524D9600328EB7 /* UIView+MD.m */,
+			);
+			path = MDShockBanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -581,6 +651,7 @@
 				F39E96AA1F04A22000E34CD1 /* getMoney04.png in Resources */,
 				F372AB4B1EE2A15200216C16 /* LaunchScreen.storyboard in Resources */,
 				F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */,
+				F3A695E821524D9600328EB7 /* MDBannerCollectionViewCell.xib in Resources */,
 				F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */,
 				F39E96B61F04A22000E34CD1 /* getMoney16.png in Resources */,
 				F39E96AB1F04A22000E34CD1 /* getMoney05.png in Resources */,
@@ -680,20 +751,27 @@
 				F372AB691EE2A95700216C16 /* HomePageViewController.m in Sources */,
 				F38164582085E81D00F96CD4 /* JBNotification.m in Sources */,
 				F381642C208450BC00F96CD4 /* JBBaseTabBar.m in Sources */,
+				F3A695EC21524D9600328EB7 /* UIView+MD.m in Sources */,
 				F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */,
+				F3A695E921524D9600328EB7 /* MDBannerModel.m in Sources */,
 				F342AA2420E37E8C00AF8DF3 /* JBNetWorkManager.m in Sources */,
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
 				F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */,
+				F3A695EA21524D9600328EB7 /* MDMaskView.m in Sources */,
 				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
 				F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
 				F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
+				F3A695EB21524D9600328EB7 /* MDShockBannerView.m in Sources */,
 				F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */,
+				F3A695E721524D9600328EB7 /* MDBannerCollectionViewCell.m in Sources */,
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,
 				F372AB661EE2A91500216C16 /* BaseViewController.m in Sources */,
 				F372AB3D1EE2A15200216C16 /* main.m in Sources */,
 				F38164492084822200F96CD4 /* JBNormalProgressHUD.m in Sources */,
+				F3A695D7215249D100328EB7 /* JBCycleBannerView.m in Sources */,
+				F386FADB214FA6BE00F24E6A /* UIButton+PC.m in Sources */,
 				F38164292084504000F96CD4 /* JBTabBarController.m in Sources */,
 				F38164512085DD8500F96CD4 /* LoginViewController.m in Sources */,
 				F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */,

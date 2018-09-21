@@ -23,4 +23,14 @@
            font:(UIFont *)font
        aligment:(NSTextAlignment)aligment;
 
+/**
+ 链式编程之主题
+ */
+- (UILabel *(^)(NSString *text))cp_text;
+
+- (UILabel *(^)(UIColor *color))cp_textColor;
+
+- (UILabel *(^)(UIFont *font))cp_font;
+
+- (UILabel *(^)(NSTextAlignment alignment))cp_alignment;
 @end

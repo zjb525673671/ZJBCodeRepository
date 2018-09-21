@@ -30,4 +30,32 @@
     self.textAlignment = aligment;
 }
 
+- (UILabel *(^)(NSString *text))cp_text {
+    return ^(NSString *text) {
+        self.text = text;
+        return self;
+    };
+}
+
+- (UILabel *(^)(UIColor *color))cp_textColor {
+    return ^(UIColor *color) {
+        self.textColor = color;
+        return self;
+    };
+}
+
+- (UILabel *(^)(UIFont *font))cp_font {
+    return ^(UIFont *font) {
+        self.font = font;
+        return self;
+    };
+}
+
+- (UILabel *(^)(NSTextAlignment alignment))cp_alignment {
+    return ^(NSTextAlignment alignment) {
+        self.textAlignment = alignment;
+        return self;
+    };
+}
+
 @end
