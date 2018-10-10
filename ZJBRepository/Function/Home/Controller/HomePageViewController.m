@@ -36,8 +36,8 @@
 {
     [super viewDidLoad];
     [self xn_initData];
-//    [self xn_initSubViews];
-    [self xn_initCPSubViews];
+    [self xn_initSubViews];
+//    [self xn_initCPSubViews];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -93,6 +93,7 @@
 //    changeButton.cp_titleColor([UIColor redColor]).cp_font([UIFont systemFontOfSize:15]).cp_title(@"变变变").cp_backgroundColor([UIColor lightGrayColor]).cp_action(self,@selector(clickAction_add));
     
     MDShockBannerView *banner = [[MDShockBannerView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 47 / 75)];
+    [self.view addSubview:banner];
     banner.delegate = self;
     banner.pageSelectImage = [UIImage imageNamed:@"home_banner_select"];
     banner.pageUnselectImage = [UIImage imageNamed:@"home_banner_unselect"];
@@ -108,7 +109,7 @@
     banner.banners = @[model1,model2];
     banner.backgroundColor = [UIColor greenColor];
     
-    [self.view addSubview:banner];
+    
 }
 
 - (void)xn_initCPSubViews {
