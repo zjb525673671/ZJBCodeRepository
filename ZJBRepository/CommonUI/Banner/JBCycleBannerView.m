@@ -85,7 +85,12 @@
 
 #pragma mark - ☸getter and setter
 
-
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] init];
+    }
+    return _imageView;
+}
 
 @end
 
@@ -111,10 +116,10 @@
 
 @property(nonatomic, strong) NSTimer *timer;
 
-@property(nonatomic, assign) CGFloat lastContentOffset;
-@property(nonatomic, assign) NSInteger totalItemCount;
-@property(nonatomic, assign) NSInteger draggingIndex;
-@property(nonatomic, assign) NSInteger currentScrollIndex;
+@property(nonatomic, assign) CGFloat lastContentOffsetX;//记录上次偏移量x
+@property(nonatomic, assign) NSInteger totalItemCount;//总的轮播
+@property(nonatomic, assign) NSInteger draggingIndex;//拖拽的cell标识
+@property(nonatomic, assign) NSInteger currentScrollIndex;//目前滚动的标识
 
 @end
 
@@ -172,7 +177,147 @@
     }
 }
 
-#pragma UICollectionViewDelegate,UICollectionViewDataSource
+#pragma mark - UIScrollviewDelegate
+
+//开始拖拽
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    self.draggingIndex = [self currentItemIndex];
+    [self invalidateTimer];
+}
+
+//结束拖拽
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self startTimer];
+}
+
+//结束减速
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.lastContentOffsetX = scrollView.contentOffset.x;
+    self.currentScrollIndex = [self currentItemIndex];
+    
+    UICollectionViewCell *cell1 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentScrollIndex inSection:0]];
+    UICollectionViewCell *cell2 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.currentScrollIndex + 1 >= self.totalItemCount) ? self.totalItemCount/2 : self.currentScrollIndex + 1 inSection:0]];
+    UICollectionViewCell *cell3 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.currentScrollIndex - 1 < 0) ? self.totalItemCount : self.currentScrollIndex - 1 inSection:0]];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        cell1.transform = CGAffineTransformMakeScale(1, 1);
+        cell2.transform = CGAffineTransformMakeScale(1, 1);
+        cell3.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+}
+
+//动画完成
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    self.currentScrollIndex = [self currentItemIndex];
+    UICollectionViewCell *cell1 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentScrollIndex inSection:0]];
+    UICollectionViewCell *cell2 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.currentScrollIndex + 1 >= self.totalItemCount) ? self.totalItemCount/2 : self.currentScrollIndex + 1 inSection:0]];
+    UICollectionViewCell *cell3 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.currentScrollIndex - 1 < 0) ? self.totalItemCount : self.currentScrollIndex - 1 inSection:0]];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        cell1.transform = CGAffineTransformMakeScale(1, 1);
+        cell2.transform = CGAffineTransformMakeScale(1, 1);
+        cell3.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+}
+
+//滚动中
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat currentOffsetX = scrollView.contentOffset.x;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    if (scrollView.isDragging || scrollView.isDecelerating) {
+        NSInteger itemIndex = self.draggingIndex%self.bannerModelArray.count;
+        if (self.lastContentOffsetX > currentOffsetX) {
+            //往右划动
+            UICollectionViewCell *cell1 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.draggingIndex inSection:0]];
+            UICollectionViewCell *cell2 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.draggingIndex - 1 < 0) ? self.totalItemCount : self.draggingIndex - 1 inSection:0]];
+            
+            [UIView animateWithDuration:0.1 animations:^{
+                cell1.transform = CGAffineTransformMakeScale(0.85, 0.85);
+                cell2.transform = CGAffineTransformMakeScale(0.85, 0.85);
+            }];
+            
+            NSInteger topIndex = (itemIndex - 1 < 0) ? self.bannerModelArray.count - 1 : itemIndex - 1;
+            NSInteger bottomIndex = itemIndex;
+            
+            JBCycleBannerModel *model1 = self.bannerModelArray[topIndex];
+            [self.topImageView sd_setImageWithURL:[NSURL URLWithString:model1.bottomImageUrl]];
+            JBCycleBannerModel *model2 = self.bannerModelArray[bottomIndex];
+            [self.bottomImageView sd_setImageWithURL:[NSURL URLWithString:model2.bottomImageUrl]];
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.leftView setRadius:(width * self.draggingIndex - currentOffsetX)*2  direction:JBBannerSrollDirectionRight];
+                [self.rightView setRadius:0  direction:JBBannerSrollDirectionLeft];
+            }];
+        } else {
+            //往左划动
+            UICollectionViewCell *cell1 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.draggingIndex inSection:0]];
+            UICollectionViewCell *cell2 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.draggingIndex + 1 >= self.totalItemCount) ? self.totalItemCount/2 : self.draggingIndex + 1 inSection:0]];
+            
+            [UIView animateWithDuration:0.1 animations:^{
+                cell1.transform = CGAffineTransformMakeScale(0.85, 0.85);
+                cell2.transform = CGAffineTransformMakeScale(0.85, 0.85);
+            }];
+            
+            NSInteger topIndex = (itemIndex + 1 >= self.bannerModelArray.count) ? 0 : itemIndex + 1;
+            NSInteger bottomIndex = itemIndex;
+            
+            JBCycleBannerModel *model1 = self.bannerModelArray[topIndex];
+            [self.topImageView sd_setImageWithURL:[NSURL URLWithString:model1.bottomImageUrl]];
+            JBCycleBannerModel *model2 = self.bannerModelArray[bottomIndex];
+            [self.bottomImageView sd_setImageWithURL:[NSURL URLWithString:model2.bottomImageUrl]];
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.leftView setRadius:0 direction:JBBannerSrollDirectionRight];
+                [self.rightView setRadius:(width * self.draggingIndex - currentOffsetX)*2   direction:JBBannerSrollDirectionLeft];
+            }];
+        }
+    } else {
+        NSInteger itemIndex = self.currentScrollIndex%self.bannerModelArray.count;
+        if (self.lastContentOffsetX > currentOffsetX) {
+            //上一个cell
+            UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.currentScrollIndex - 1 < 0) ? self.totalItemCount : self.currentScrollIndex inSection:0]];
+            
+            [UIView animateWithDuration:0.1 animations:^{
+                cell.transform = CGAffineTransformMakeScale(0.85, 0.85);
+            }];
+            
+            NSInteger topIndex = (itemIndex - 1 < 0) ? self.bannerModelArray.count - 1 : itemIndex - 1;
+            NSInteger bottomIndex = itemIndex;
+            
+            JBCycleBannerModel *model1 = self.bannerModelArray[topIndex];
+            [self.topImageView sd_setImageWithURL:[NSURL URLWithString:model1.bottomImageUrl]];
+            JBCycleBannerModel *model2 = self.bannerModelArray[bottomIndex];
+            [self.bottomImageView sd_setImageWithURL:[NSURL URLWithString:model2.bottomImageUrl]];
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.leftView setRadius:(currentOffsetX - width * self.currentScrollIndex)*2  direction:JBBannerSrollDirectionRight];
+                [self.rightView setRadius:0  direction:JBBannerSrollDirectionLeft];
+            }];
+        } else {
+            UICollectionViewCell *cell2 = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:(self.currentScrollIndex + 1 >= self.totalItemCount) ? self.totalItemCount/2 : self.currentScrollIndex + 1 inSection:0]];
+            
+            [UIView animateWithDuration:0.1 animations:^{
+                cell2.transform = CGAffineTransformMakeScale(0.85, 0.85);
+            }];
+            
+            NSInteger topIndex = (itemIndex + 1 >= self.bannerModelArray.count) ? 0 : itemIndex + 1;
+            NSInteger bottomIndex = itemIndex;
+            
+            JBCycleBannerModel *model1 = self.bannerModelArray[topIndex];
+            [self.topImageView sd_setImageWithURL:[NSURL URLWithString:model1.bottomImageUrl]];
+            JBCycleBannerModel *model2 = self.bannerModelArray[bottomIndex];
+            [self.bottomImageView sd_setImageWithURL:[NSURL URLWithString:model2.bottomImageUrl]];
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.leftView setRadius:0 direction:JBBannerSrollDirectionRight];
+                [self.rightView setRadius:(currentOffsetX - width * self.currentScrollIndex)*2   direction:JBBannerSrollDirectionLeft];
+            }];
+        }
+        self.lastContentOffsetX = currentOffsetX;
+    }
+}
+
+#pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.totalItemCount;
@@ -251,7 +396,7 @@
 
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 10, self.frame.size.width, self.frame.size.height - 10) collectionViewLayout:self.flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 10 + self.navH, self.frame.size.width, self.frame.size.height - 10 - self.navH) collectionViewLayout:self.flowLayout];
         _collectionView.backgroundColor = [UIColor clearColor];
         _collectionView.pagingEnabled = YES;
         _collectionView.showsHorizontalScrollIndicator = NO;
@@ -265,7 +410,7 @@
 - (UICollectionViewFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[UICollectionViewFlowLayout alloc]init];
-        _flowLayout.itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height - 10);
+        _flowLayout.itemSize = CGSizeMake(self.frame.size.width, self.frame.size.height - self.navH - 10);
         _flowLayout.minimumLineSpacing = 0;
         _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     }

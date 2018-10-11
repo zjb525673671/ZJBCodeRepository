@@ -13,8 +13,9 @@
 #import "HomePagePresenter.h"
 #import "MDShockBannerView.h"
 #import "MDBannerModel.h"
+#import "JBCycleBannerView.h"
 
-@interface HomePageViewController () <MDShockBannerViewDelegate>
+@interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate>
 
 @property (nonatomic, strong) XNGradientView *maxMoneyView;
 @property (nonatomic, strong) UIImageView *successImageView;
@@ -67,48 +68,18 @@
 
 - (void)xn_initSubViews
 {
-//    UIButton *redButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    redButton.cp_title(@"我不喜欢你").cp_font([UIFont systemFontOfSize:15]).cp_titleColor([UIColor redColor]).cp_action(self,@selector(clickAction_add)).cp_backgroundColor([UIColor yellowColor]);
-//    self.oneLabel = [UILabel new];
-//    self.twoLabel = [UILabel new];
-//
-//    UIButton *changeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [self.view addSubview:self.oneLabel];
-//    [self.view addSubview:self.twoLabel];
-//    [self.view addSubview:changeButton];
-//    [self.oneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view).offset(12);
-//        make.top.equalTo(self.view).offset(100);
-//    }];
-//    [self.twoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.oneLabel.mas_right);
-//        make.top.equalTo(self.view).offset(100);
-//    }];
-//    [changeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.equalTo(self.view);
-//        make.size.mas_equalTo(CGSizeMake(200, 100));
-//    }];
-//    self.oneLabel.cp_font([UIFont systemFontOfSize:15]).cp_text(@"你好").cp_alignment(NSTextAlignmentLeft).cp_textColor([UIColor redColor]);
-//    self.twoLabel.cp_font([UIFont systemFontOfSize:15]).cp_text(@"你妹啊").cp_alignment(NSTextAlignmentLeft).cp_textColor([UIColor greenColor]);
-//    changeButton.cp_titleColor([UIColor redColor]).cp_font([UIFont systemFontOfSize:15]).cp_title(@"变变变").cp_backgroundColor([UIColor lightGrayColor]).cp_action(self,@selector(clickAction_add));
-    
-    MDShockBannerView *banner = [[MDShockBannerView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 47 / 75)];
+    JBCycleBannerView *banner = [[JBCycleBannerView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 47 / 75)];
     [self.view addSubview:banner];
     banner.delegate = self;
-    banner.pageSelectImage = [UIImage imageNamed:@"home_banner_select"];
-    banner.pageUnselectImage = [UIImage imageNamed:@"home_banner_unselect"];
-    MDBannerModel *model1 = [[MDBannerModel alloc] init];
-    model1.img = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/6265b5b9bf8686f009cf44c366cfa4abd26b1a79.png";
-    model1.bgImg = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/9bc42ce40490c854eab2e9969ac8e328caab0a17.png";
+
+    JBCycleBannerModel *model1 = [[JBCycleBannerModel alloc] init];
+    model1.topImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/6265b5b9bf8686f009cf44c366cfa4abd26b1a79.png";
+    model1.bottomImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/9bc42ce40490c854eab2e9969ac8e328caab0a17.png";
     
-    MDBannerModel *model2 = [[MDBannerModel alloc] init];
-    model2.img = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/16f7ab6124ae4688f0adef43ff3ab3b1f09ccc67.png";
-    model2.bgImg = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/81e9ad49cba8dc479a09d146a1fabf4b9ef3504d.png";
-    
-    
-    banner.banners = @[model1,model2];
-    banner.backgroundColor = [UIColor greenColor];
-    
+    JBCycleBannerModel *model2 = [[JBCycleBannerModel alloc] init];
+    model2.topImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/16f7ab6124ae4688f0adef43ff3ab3b1f09ccc67.png";
+    model2.bottomImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/81e9ad49cba8dc479a09d146a1fabf4b9ef3504d.png";
+    banner.bannerModelArray = @[model1,model2];
     
 }
 
