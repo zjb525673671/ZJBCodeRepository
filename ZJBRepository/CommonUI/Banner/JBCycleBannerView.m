@@ -99,23 +99,15 @@
 
 @property(nonatomic, assign) CGFloat navH;
 
-@property(nonatomic, strong) UIImageView *topImageView;
-@property(nonatomic, strong) UIImageView *bottomImageView;
-
-@property(nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
-
-@property(nonatomic, strong) UICollectionView *collectionView;
-
-
-@property(nonatomic, strong) UIView *bannerMaskView;
-
-@property(nonatomic, strong) UIPageControl *pageControl;
-
-@property(nonatomic, strong) JBMaskView *leftView;
-@property(nonatomic, strong) JBMaskView *rightView;
-
-@property(nonatomic, strong) NSTimer *timer;
-
+@property(nonatomic, strong) UIImageView *topImageView;//背景上层图片
+@property(nonatomic, strong) UIImageView *bottomImageView;//背景下层图片
+@property(nonatomic, strong) UICollectionViewFlowLayout *flowLayout;//布局
+@property(nonatomic, strong) UICollectionView *collectionView;//banner
+@property(nonatomic, strong) UIView *bannerMaskView;//遮罩
+@property(nonatomic, strong) UIPageControl *pageControl;//小点
+@property(nonatomic, strong) JBMaskView *leftView;//往左边滑动时动画的视图
+@property(nonatomic, strong) JBMaskView *rightView;//往右边滑动时动画的视图
+@property(nonatomic, strong) NSTimer *timer;//定时器
 @property(nonatomic, assign) CGFloat lastContentOffsetX;//记录上次偏移量x
 @property(nonatomic, assign) NSInteger totalItemCount;//总的轮播
 @property(nonatomic, assign) NSInteger draggingIndex;//拖拽的cell标识
@@ -133,6 +125,10 @@
         [self initSubViews];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self invalidateTimer];
 }
 
 - (void)initSubViews {
@@ -390,8 +386,7 @@
 }
 
 - (CGFloat)navH {
-    
-    return 64;
+    return [UIApplication sharedApplication].statusBarFrame.size.height + 44;
 }
 
 - (UICollectionView *)collectionView {
