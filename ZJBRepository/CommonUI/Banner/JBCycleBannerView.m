@@ -166,8 +166,8 @@
 }
 
 - (void)scrollToItemIndex:(NSInteger)toIndex {
-    if (toIndex > self.totalItemCount) {
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.totalItemCount/2 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    if (toIndex >= self.totalItemCount) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.totalItemCount%self.bannerModelArray.count inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     } else {
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:toIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     }
@@ -343,6 +343,12 @@
     }
     NSInteger currentIndex = [self currentItemIndex];
     NSInteger toIndex = currentIndex + 1;
+    
+    if (currentIndex == self.totalItemCount - self.bannerModelArray.count - 1) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.bannerModelArray.count - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        currentIndex = [self currentItemIndex];
+        toIndex = currentIndex + 1;
+    }
     UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:currentIndex inSection:0]];
     [UIView animateWithDuration:0.2 animations:^{
         cell.transform = CGAffineTransformMakeScale(0.85, 0.85);
@@ -362,11 +368,11 @@
     if (bannerModelArray.count == 1) {
         self.totalItemCount = 1;
     } else {
-        self.totalItemCount = bannerModelArray.count * 100;
+        self.totalItemCount = bannerModelArray.count * 5;
     }
     _bannerModelArray = bannerModelArray;
     [self.collectionView reloadData];
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.totalItemCount/2 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_bannerModelArray.count inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     
     NSInteger index = [self currentItemIndex]%bannerModelArray.count;
     
