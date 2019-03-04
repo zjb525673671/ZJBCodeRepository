@@ -14,6 +14,7 @@
 #import "MDShockBannerView.h"
 #import "MDBannerModel.h"
 #import "JBCycleBannerView.h"
+#import <SVGAPlayer/SVGA.h>
 
 @interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate>
 

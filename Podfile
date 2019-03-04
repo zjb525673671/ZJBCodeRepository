@@ -12,6 +12,7 @@ def shared_pods
     pod 'lottie-ios', '~> 2.1.5'    #是一款用来解析Adobe After Effects动画的iOS库。它通过Bodymovin After Effects的插件来实现，并确保各种动画能同时在移动平台和Web平台上被精美地呈现出来。
     pod 'GPUImage', '~> 0.1.7'      #一款强大的图片滤镜工具, 支持自定义滤镜, 可用来实时处理图片和视频流
     pod 'FMDB', '~> 2.7.2'          #本地数据库
+    pod 'SVGAPlayer', '~> 2.3.0' #高性能的动画播放器
 end
 
 target 'ZJBRepository’ do
