@@ -44,6 +44,13 @@
     };
 }
 
+- (UIButton *(^)(BOOL hidden))cp_hidden {
+    return ^(BOOL hidden) {
+        self.hidden = hidden;
+        return self;
+    };
+}
+
 - (UIButton *(^)(UIColor *color))cp_backgroundColor {
     return ^(UIColor *color) {
         self.backgroundColor = color;
@@ -58,9 +65,60 @@
     };
 }
 
+- (UIButton *(^)(UIImage *image))cp_backImage {
+    return ^(UIImage *image) {
+        [self setBackgroundImage:image forState:UIControlStateNormal];
+        return self;
+    };
+}
+
 - (UIButton *(^)(id object, SEL action))cp_action {
     return ^(id object, SEL action) {
         [self addTarget:object action:action forControlEvents:UIControlEventTouchUpInside];
+        return self;
+    };
+}
+
+/**
+ 链式编程之cornerRadius
+ */
+- (UIButton *(^)(CGFloat radius))cp_cornerRadius {
+    return ^(CGFloat radius) {
+        self.layer.cornerRadius = radius;
+        return self;
+    };
+}
+
+/**
+ 链式编程之borderColor
+ */
+- (UIButton *(^)(UIColor *color))cp_borderColor {
+    return ^(UIColor *color) {
+        self.layer.borderColor = color.CGColor;
+        return self;
+    };
+}
+
+/**
+ 链式编程之borderWidth
+ */
+- (UIButton *(^)(CGFloat width))cp_borderWidth {
+    return ^(CGFloat width) {
+        self.layer.borderWidth = width;
+        return self;
+    };
+}
+
+- (UIButton *(^)(BOOL isBounds))cp_clipsToBounds {
+    return ^(BOOL isBounds) {
+        self.clipsToBounds = isBounds;
+        return self;
+    };
+}
+
+- (UIButton *(^)(NSInteger tag))cp_tag {
+    return ^(NSInteger tag) {
+        self.tag = tag;
         return self;
     };
 }

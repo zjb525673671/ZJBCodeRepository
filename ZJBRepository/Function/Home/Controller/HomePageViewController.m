@@ -16,7 +16,7 @@
 #import "JBCycleBannerView.h"
 #import <SVGAPlayer/SVGA.h>
 
-@interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate>
+@interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate,SVGAPlayerDelegate>
 
 @property (nonatomic, strong) XNGradientView *maxMoneyView;
 @property (nonatomic, strong) UIImageView *successImageView;
@@ -26,6 +26,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) JBGravityImageView *moveImageView;
 @property (nonatomic, strong) HomePagePresenter *presenter;
+@property (nonatomic, strong) SVGAPlayer *animationPlayer;//动画播放器
+@property (nonatomic, strong) SVGAParser *parser;//缓存播放
 
 
 @end
@@ -69,18 +71,32 @@
 
 - (void)xn_initSubViews
 {
-    JBCycleBannerView *banner = [[JBCycleBannerView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 47 / 75)];
-    [self.view addSubview:banner];
-    banner.delegate = self;
-
-    JBCycleBannerModel *model1 = [[JBCycleBannerModel alloc] init];
-    model1.topImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/6265b5b9bf8686f009cf44c366cfa4abd26b1a79.png";
-    model1.bottomImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/9bc42ce40490c854eab2e9969ac8e328caab0a17.png";
+    self.animationPlayer.frame = CGRectMake(0, 0, MainJBScreenWidth, MainJBScreenWidth);
+    [self.view addSubview:self.animationPlayer];
     
-    JBCycleBannerModel *model2 = [[JBCycleBannerModel alloc] init];
-    model2.topImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/16f7ab6124ae4688f0adef43ff3ab3b1f09ccc67.png";
-    model2.bottomImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/81e9ad49cba8dc479a09d146a1fabf4b9ef3504d.png";
-    banner.bannerModelArray = @[model1,model2];
+    UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:playButton];
+    [playButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.bottom.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(200, 100));
+    }];
+    playButton.cp_font([UIFont jb_regularFontWithSize:18]).cp_title(@"播放动画").cp_titleColor([UIColor blackColor]).cp_action(self,@selector(clickAction_playAnimation:));
+    
+    
+    
+//    JBCycleBannerView *banner = [[JBCycleBannerView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 47 / 75)];
+//    [self.view addSubview:banner];
+//    banner.delegate = self;
+//
+//    JBCycleBannerModel *model1 = [[JBCycleBannerModel alloc] init];
+//    model1.topImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/6265b5b9bf8686f009cf44c366cfa4abd26b1a79.png";
+//    model1.bottomImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/9bc42ce40490c854eab2e9969ac8e328caab0a17.png";
+//
+//    JBCycleBannerModel *model2 = [[JBCycleBannerModel alloc] init];
+//    model2.topImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/16f7ab6124ae4688f0adef43ff3ab3b1f09ccc67.png";
+//    model2.bottomImageUrl = @"http://md-juhe.oss-cn-hangzhou.aliyuncs.com/upload/ad/20180417/81e9ad49cba8dc479a09d146a1fabf4b9ef3504d.png";
+//    banner.bannerModelArray = @[model1,model2];
     
 }
 
@@ -223,6 +239,9 @@
 }
 #pragma mark - 🍐delegate
 
+- (void)svgaPlayerDidFinishedAnimation:(SVGAPlayer *)player {
+    
+}
 #pragma mark - ☎️notification
 
 #pragma mark - 🎬event response
@@ -250,6 +269,20 @@
 
 - (void)clickBanner:(NSInteger)index {
     NSLog(@"点击了第%ld个banner",index);
+}
+
+- (void)clickAction_playAnimation:(UIButton *)sender {
+    //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1549963880616.svga
+    //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742607853.svga
+    //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742411015.svga
+    //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742531055.svga
+    [self.parser parseWithURL:[NSURL URLWithString:@"http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1549963880616.svga"] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
+        self.animationPlayer.videoItem = videoItem;
+        [self.animationPlayer startAnimation];
+        self.animationPlayer.loops = 1;
+    } failureBlock:^(NSError * _Nullable error) {
+        
+    }];
 }
 #pragma mark - ☸getter and setter
 
@@ -301,6 +334,21 @@
         _presenter = [[HomePagePresenter alloc]init];
     }
     return _presenter;
+}
+
+- (SVGAPlayer *)animationPlayer {
+    if (!_animationPlayer) {
+        _animationPlayer = [[SVGAPlayer alloc] init];
+        _animationPlayer.delegate = self;
+    }
+    return _animationPlayer;
+}
+
+- (SVGAParser *)parser {
+    if (!_parser) {
+        _parser = [[SVGAParser alloc] init];
+    }
+    return _parser;
 }
 
 @end

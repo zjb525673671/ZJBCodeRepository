@@ -40,4 +40,11 @@
     return _testDB;
 }
 
+- (NSMutableArray *)animationUrlArray {
+    if (!_animationUrlArray) {
+        _animationUrlArray = [[NSMutableArray alloc] init];
+    }
+    return _animationUrlArray;
+}
+
 @end

@@ -13,6 +13,7 @@
 @interface HomePagePresenter : NSObject
 
 @property (nonatomic, strong) FMDatabase *testDB;
+@property (nonatomic, strong) NSMutableArray *animationUrlArray;
 
 /**
  创建新的表
