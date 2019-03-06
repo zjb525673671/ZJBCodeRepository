@@ -14,6 +14,9 @@
 
 @property (nonatomic, strong) FMDatabase *testDB;
 @property (nonatomic, strong) NSMutableArray *animationUrlArray;
+@property (nonatomic, strong) NSArray *giftUrlArray;//礼物urla数组
+@property (nonatomic, assign) NSInteger selectIndex;
+@property (nonatomic, strong) NSMutableArray *testArray;//测试数组
 
 /**
  创建新的表
@@ -21,5 +24,10 @@
  @param DBName 标的名字
  */
 - (void)FMDB_createTable:(NSString *)DBName;
+
+/**
+ 随机增加礼物动画
+ */
+- (void)help_addGiftUrlRandom;
 
 @end

@@ -34,6 +34,13 @@
 		F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645D2086EF3E00F96CD4 /* JBGravityManager.m */; };
 		F38164642086F1FC00F96CD4 /* JBGravityImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164632086F1FC00F96CD4 /* JBGravityImageView.m */; };
 		F386FADB214FA6BE00F24E6A /* UIButton+PC.m in Sources */ = {isa = PBXBuildFile; fileRef = F386FADA214FA6BE00F24E6A /* UIButton+PC.m */; };
+		F38AE050222FAC7900E3EBEE /* WHDebugToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE043222FAC7700E3EBEE /* WHDebugToolManager.m */; };
+		F38AE051222FAC7900E3EBEE /* WHDebugTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04A222FAC7700E3EBEE /* WHDebugTempVC.m */; };
+		F38AE052222FAC7900E3EBEE /* WHDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04B222FAC7700E3EBEE /* WHDebugFPSMonitor.m */; };
+		F38AE053222FAC7900E3EBEE /* WHDebugMemoryMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04C222FAC7700E3EBEE /* WHDebugMemoryMonitor.m */; };
+		F38AE054222FAC7900E3EBEE /* WHDebugConsoleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04D222FAC7700E3EBEE /* WHDebugConsoleLabel.m */; };
+		F38AE055222FAC7900E3EBEE /* WHDebugMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04E222FAC7700E3EBEE /* WHDebugMonitor.m */; };
+		F38AE056222FAC7900E3EBEE /* WHDebugCpuMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04F222FAC7700E3EBEE /* WHDebugCpuMonitor.m */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -121,6 +128,20 @@
 		F38164632086F1FC00F96CD4 /* JBGravityImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBGravityImageView.m; sourceTree = "<group>"; };
 		F386FAD9214FA6BE00F24E6A /* UIButton+PC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+PC.h"; sourceTree = "<group>"; };
 		F386FADA214FA6BE00F24E6A /* UIButton+PC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+PC.m"; sourceTree = "<group>"; };
+		F38AE042222FAC7700E3EBEE /* WHDebugTempVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugTempVC.h; sourceTree = "<group>"; };
+		F38AE043222FAC7700E3EBEE /* WHDebugToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugToolManager.m; sourceTree = "<group>"; };
+		F38AE044222FAC7700E3EBEE /* WHDebugConsoleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugConsoleLabel.h; sourceTree = "<group>"; };
+		F38AE045222FAC7700E3EBEE /* WHDebugMemoryMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugMemoryMonitor.h; sourceTree = "<group>"; };
+		F38AE046222FAC7700E3EBEE /* WHDebugFPSMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugFPSMonitor.h; sourceTree = "<group>"; };
+		F38AE047222FAC7700E3EBEE /* WHDebugMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugMonitor.h; sourceTree = "<group>"; };
+		F38AE048222FAC7700E3EBEE /* WHDebugCpuMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugCpuMonitor.h; sourceTree = "<group>"; };
+		F38AE049222FAC7700E3EBEE /* WHDebugToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugToolManager.h; sourceTree = "<group>"; };
+		F38AE04A222FAC7700E3EBEE /* WHDebugTempVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugTempVC.m; sourceTree = "<group>"; };
+		F38AE04B222FAC7700E3EBEE /* WHDebugFPSMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugFPSMonitor.m; sourceTree = "<group>"; };
+		F38AE04C222FAC7700E3EBEE /* WHDebugMemoryMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugMemoryMonitor.m; sourceTree = "<group>"; };
+		F38AE04D222FAC7700E3EBEE /* WHDebugConsoleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugConsoleLabel.m; sourceTree = "<group>"; };
+		F38AE04E222FAC7700E3EBEE /* WHDebugMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugMonitor.m; sourceTree = "<group>"; };
+		F38AE04F222FAC7700E3EBEE /* WHDebugCpuMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugCpuMonitor.m; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -218,6 +239,7 @@
 				F39E968A1F0230A300E34CD1 /* CommonUI */,
 				F381643220847DA500F96CD4 /* Categroy */,
 				F39E95E31EF26D6600E34CD1 /* Tools */,
+				F38AE040222FAC7700E3EBEE /* ThirdParty */,
 				F372AB3B1EE2A15200216C16 /* Supporting Files */,
 			);
 			path = ZJBRepository;
@@ -483,6 +505,35 @@
 				F386FADA214FA6BE00F24E6A /* UIButton+PC.m */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		F38AE040222FAC7700E3EBEE /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				F38AE041222FAC7700E3EBEE /* WHDebugTool */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		F38AE041222FAC7700E3EBEE /* WHDebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				F38AE042222FAC7700E3EBEE /* WHDebugTempVC.h */,
+				F38AE043222FAC7700E3EBEE /* WHDebugToolManager.m */,
+				F38AE044222FAC7700E3EBEE /* WHDebugConsoleLabel.h */,
+				F38AE045222FAC7700E3EBEE /* WHDebugMemoryMonitor.h */,
+				F38AE046222FAC7700E3EBEE /* WHDebugFPSMonitor.h */,
+				F38AE047222FAC7700E3EBEE /* WHDebugMonitor.h */,
+				F38AE048222FAC7700E3EBEE /* WHDebugCpuMonitor.h */,
+				F38AE049222FAC7700E3EBEE /* WHDebugToolManager.h */,
+				F38AE04A222FAC7700E3EBEE /* WHDebugTempVC.m */,
+				F38AE04B222FAC7700E3EBEE /* WHDebugFPSMonitor.m */,
+				F38AE04C222FAC7700E3EBEE /* WHDebugMemoryMonitor.m */,
+				F38AE04D222FAC7700E3EBEE /* WHDebugConsoleLabel.m */,
+				F38AE04E222FAC7700E3EBEE /* WHDebugMonitor.m */,
+				F38AE04F222FAC7700E3EBEE /* WHDebugCpuMonitor.m */,
+			);
+			path = WHDebugTool;
 			sourceTree = "<group>";
 		};
 		F39E95E31EF26D6600E34CD1 /* Tools */ = {
@@ -756,6 +807,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F372AB6C1EE2A9B300216C16 /* HomePageModel.m in Sources */,
+				F38AE052222FAC7900E3EBEE /* WHDebugFPSMonitor.m in Sources */,
 				F38164642086F1FC00F96CD4 /* JBGravityImageView.m in Sources */,
 				F372AB691EE2A95700216C16 /* HomePageViewController.m in Sources */,
 				F38164582085E81D00F96CD4 /* JBNotification.m in Sources */,
@@ -763,12 +815,17 @@
 				F3A695EC21524D9600328EB7 /* UIView+MD.m in Sources */,
 				F381645B2085E88400F96CD4 /* LoginUserInfoModel.m in Sources */,
 				F3A695E921524D9600328EB7 /* MDBannerModel.m in Sources */,
+				F38AE054222FAC7900E3EBEE /* WHDebugConsoleLabel.m in Sources */,
 				F342AA2420E37E8C00AF8DF3 /* JBNetWorkManager.m in Sources */,
+				F38AE051222FAC7900E3EBEE /* WHDebugTempVC.m in Sources */,
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
 				F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */,
+				F38AE053222FAC7900E3EBEE /* WHDebugMemoryMonitor.m in Sources */,
 				F3A695EA21524D9600328EB7 /* MDMaskView.m in Sources */,
 				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
 				F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */,
+				F38AE056222FAC7900E3EBEE /* WHDebugCpuMonitor.m in Sources */,
+				F38AE050222FAC7900E3EBEE /* WHDebugToolManager.m in Sources */,
 				F372AB6F1EE2A9CB00216C16 /* HomePagePresenter.m in Sources */,
 				F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */,
 				F372AB5D1EE2A87A00216C16 /* AppDelegate.m in Sources */,
@@ -781,6 +838,7 @@
 				F38164492084822200F96CD4 /* JBNormalProgressHUD.m in Sources */,
 				F3A695D7215249D100328EB7 /* JBCycleBannerView.m in Sources */,
 				F386FADB214FA6BE00F24E6A /* UIButton+PC.m in Sources */,
+				F38AE055222FAC7900E3EBEE /* WHDebugMonitor.m in Sources */,
 				F38164292084504000F96CD4 /* JBTabBarController.m in Sources */,
 				F38164512085DD8500F96CD4 /* LoginViewController.m in Sources */,
 				F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */,

@@ -15,6 +15,7 @@
 #import "MDBannerModel.h"
 #import "JBCycleBannerView.h"
 #import <SVGAPlayer/SVGA.h>
+#import "WHDebugToolManager.h"
 
 @interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate,SVGAPlayerDelegate>
 
@@ -26,8 +27,14 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) JBGravityImageView *moveImageView;
 @property (nonatomic, strong) HomePagePresenter *presenter;
+
+//动画
+@property (nonatomic, strong) UILabel *showLabel;//展示动画第几个
 @property (nonatomic, strong) SVGAPlayer *animationPlayer;//动画播放器
 @property (nonatomic, strong) SVGAParser *parser;//缓存播放
+@property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, strong) NSTimer *timer;
 
 
 @end
@@ -60,6 +67,7 @@
 
 - (void)xn_initData
 {
+    [[WHDebugToolManager sharedInstance] toggleWith: DebugToolTypeAll];
     self.title = @"首页";
     self.automaticallyAdjustsScrollViewInsets = NO;
     if (@available(iOS 11.0, *)) {
@@ -67,22 +75,36 @@
             self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
     }
+    for (NSInteger i = 0; i < self.presenter.giftUrlArray.count; i++) {
+        NSString *urlStr = self.presenter.giftUrlArray[i];
+        [self.parser parseWithURL:[NSURL URLWithString:urlStr] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
+            XNLog(@"预加载好了第几个=%zd",i);
+        } failureBlock:^(NSError * _Nullable error) {
+        }];
+    }
+//    self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timer_request) userInfo:nil repeats:YES];
+//    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)xn_initSubViews
 {
     self.animationPlayer.frame = CGRectMake(0, 0, MainJBScreenWidth, MainJBScreenWidth);
     [self.view addSubview:self.animationPlayer];
-    
+    [self.view addSubview:self.showLabel];
+    [self.showLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(200);
+        make.centerX.equalTo(self.view);
+    }];
+    self.showLabel.cp_font([UIFont jb_regularFontWithSize:24]).cp_alignment(NSTextAlignmentCenter).cp_textColor([UIColor redColor]);
     UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:playButton];
     [playButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.bottom.equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(200, 100));
+        make.bottom.equalTo(self.view).offset(-50);
+        make.size.mas_equalTo(CGSizeMake(200, 50));
     }];
-    playButton.cp_font([UIFont jb_regularFontWithSize:18]).cp_title(@"播放动画").cp_titleColor([UIColor blackColor]).cp_action(self,@selector(clickAction_playAnimation:));
-    
+    playButton.cp_font([UIFont jb_regularFontWithSize:18]).cp_title(@"发送礼物").cp_titleColor([UIColor blackColor]).cp_action(self,@selector(clickAction_playAnimation:));
+    playButton.cp_cornerRadius(25).cp_borderWidth(1).cp_borderColor([UIColor redColor]);
     
     
 //    JBCycleBannerView *banner = [[JBCycleBannerView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.width * 47 / 75)];
@@ -240,11 +262,20 @@
 #pragma mark - 🍐delegate
 
 - (void)svgaPlayerDidFinishedAnimation:(SVGAPlayer *)player {
-    
+    self.currentIndex ++;
+    [self help_playWithIndex:self.currentIndex];
 }
 #pragma mark - ☎️notification
 
 #pragma mark - 🎬event response
+
+- (void)timer_request {
+    for (NSInteger i = 0; i < 100; i ++) {
+        [self.presenter.testArray addObject:@"你们的APP在我这呢"];
+    }
+    XNLog(@"时间Log发出的时间!");
+}
+
 - (void)clickAction_add {
     self.oneLabel.text = [self.oneLabel.text stringByAppendingString:@"大坏蛋"];
     NSLog(@"你点击我了!我很不喜欢");
@@ -276,14 +307,44 @@
     //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742607853.svga
     //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742411015.svga
     //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742531055.svga
-    [self.parser parseWithURL:[NSURL URLWithString:@"http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1549963880616.svga"] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
-        self.animationPlayer.videoItem = videoItem;
-        [self.animationPlayer startAnimation];
-        self.animationPlayer.loops = 1;
-    } failureBlock:^(NSError * _Nullable error) {
-        
-    }];
+    [self.presenter help_addGiftUrlRandom];
+    self.showLabel.text = [NSString stringWithFormat:@"总共%zd个礼物,正在播放第%zd礼物",self.presenter.animationUrlArray.count,self.currentIndex + 1];
+    if (!self.isPlaying) {
+        self.isPlaying = YES;
+        [self help_playWithIndex:0];
+    }
 }
+
+- (void)help_playWithIndex:(NSInteger)index {
+    if (index < self.presenter.animationUrlArray.count) {
+        NSString *urlStr = self.presenter.animationUrlArray[index];
+        XNLog(@"准备播放");
+        [self.parser parseWithURL:[NSURL URLWithString:urlStr] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
+            XNLog(@"开始播放");
+            if (videoItem) {
+                self.showLabel.hidden = NO;
+                self.showLabel.text = [NSString stringWithFormat:@"总共%zd个礼物,正在播放第%zd礼物",self.presenter.animationUrlArray.count,self.currentIndex + 1];
+                self.animationPlayer.videoItem = videoItem;
+                [self.animationPlayer startAnimation];
+                self.animationPlayer.loops = 1;
+            } else {
+                self.showLabel.hidden = YES;
+                self.currentIndex ++;
+            }
+        } failureBlock:^(NSError * _Nullable error) {
+            XNLog(@"播放错误!");
+            self.showLabel.hidden = YES;
+            self.currentIndex ++;
+            [self help_playWithIndex:self.currentIndex];
+        }];
+    } else {
+        self.showLabel.hidden = YES;
+        [self.presenter.animationUrlArray removeAllObjects];
+        self.currentIndex = 0;
+        self.isPlaying = NO;
+    }
+}
+
 #pragma mark - ☸getter and setter
 
 - (XNGradientView *)maxMoneyView {
@@ -340,6 +401,7 @@
     if (!_animationPlayer) {
         _animationPlayer = [[SVGAPlayer alloc] init];
         _animationPlayer.delegate = self;
+        _animationPlayer.clearsAfterStop = YES;
     }
     return _animationPlayer;
 }
@@ -349,6 +411,13 @@
         _parser = [[SVGAParser alloc] init];
     }
     return _parser;
+}
+
+- (UILabel *)showLabel {
+    if (!_showLabel) {
+        _showLabel = [[UILabel alloc] init];
+    }
+    return _showLabel;
 }
 
 @end

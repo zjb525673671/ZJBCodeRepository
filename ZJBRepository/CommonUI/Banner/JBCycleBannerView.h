@@ -26,6 +26,8 @@ typedef enum : NSUInteger {
 
 @protocol JBCycleBannerViewDelegate <NSObject>
 
+@optional
+
 /**
  点击的第几个banner事件
 
