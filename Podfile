@@ -13,6 +13,7 @@ def shared_pods
     pod 'GPUImage', '~> 0.1.7'      #一款强大的图片滤镜工具, 支持自定义滤镜, 可用来实时处理图片和视频流
     pod 'FMDB', '~> 2.7.2'          #本地数据库
     pod 'SVGAPlayer', '~> 2.3.0' #高性能的动画播放器
+    pod 'AliyunOSSiOS', '~> 2.10.7' #oss上传图片和视频文件
 end
 
 target 'ZJBRepository’ do
