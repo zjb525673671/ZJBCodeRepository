@@ -8,6 +8,10 @@
 
 #import "JBNetWorkManager.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import <AliyunOSSiOS/AliyunOSSiOS.h>
+
+/// 上传回调
+typedef void(^uploadCallblock)(BOOL success, NSString* msg, NSArray<NSString *>* keys);
 
 @implementation JBNetWorkManager
 
@@ -32,6 +36,11 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];
+}
+
++ (void)uploadImages:(NSArray *)images isAsync:(BOOL)isAsync callback:(uploadCallblock)callback {
+    // 1
+    
 }
 
 @end

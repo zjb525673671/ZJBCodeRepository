@@ -39,6 +39,7 @@ PODS:
     - SVGAPlayer/ProtoFiles
   - SVGAPlayer/ProtoFiles (2.3.0):
     - Protobuf (~> 3.4)
+  - VasSonic (3.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - SDWebImage (~> 4.0.0)
   - SVGAPlayer (~> 2.3.0)
+  - VasSonic (~> 3.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -67,7 +69,8 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
   SVGAPlayer: 39ad3d16643d8c63d62bd8a3decc0de4bc9b66c4
+  VasSonic: 681ec95418d485d8c501d13549e25dff18754893
 
-PODFILE CHECKSUM: aeefa3d3b7430b1caf5d67fbd70e39917284aa2d
+PODFILE CHECKSUM: 26a1e6d3bfa2198011092f6c1083c2aca3e81bff
 
 COCOAPODS: 1.4.0
