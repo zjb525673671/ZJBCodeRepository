@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		752CCBC1DBA146A6D3B5279A /* Pods_ZJBRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */; };
+		F31938522261EBA80089B78E /* HomeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F31938512261EBA80089B78E /* HomeContentView.m */; };
 		F342AA2420E37E8C00AF8DF3 /* JBNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */; };
 		F372AB3D1EE2A15200216C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB3C1EE2A15200216C16 /* main.m */; };
 		F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F372AB471EE2A15200216C16 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		F3A695EA21524D9600328EB7 /* MDMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E221524D9600328EB7 /* MDMaskView.m */; };
 		F3A695EB21524D9600328EB7 /* MDShockBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E421524D9600328EB7 /* MDShockBannerView.m */; };
 		F3A695EC21524D9600328EB7 /* UIView+MD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A695E621524D9600328EB7 /* UIView+MD.m */; };
+		F3AC5C0B2264B94000EF036C /* BaseUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AC5C0A2264B94000EF036C /* BaseUIWebViewController.m */; };
 		F3E89B8220FC80AB00EC8526 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */; };
 		F3E89B8420FC80BC00EC8526 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		05DB67202032BA57E9EA128A /* Pods-ZJBRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJBRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DF9F81997D657169BF7DD2 /* Pods-ZJBRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository.release.xcconfig"; sourceTree = "<group>"; };
+		F31938502261EBA80089B78E /* HomeContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeContentView.h; sourceTree = "<group>"; };
+		F31938512261EBA80089B78E /* HomeContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeContentView.m; sourceTree = "<group>"; };
 		F342AA2220E37E8C00AF8DF3 /* JBNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBNetWorkManager.h; sourceTree = "<group>"; };
 		F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNetWorkManager.m; sourceTree = "<group>"; };
 		F372AB381EE2A15200216C16 /* ZJBRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJBRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +180,8 @@
 		F3A695E421524D9600328EB7 /* MDShockBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDShockBannerView.m; sourceTree = "<group>"; };
 		F3A695E521524D9600328EB7 /* UIView+MD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MD.h"; sourceTree = "<group>"; };
 		F3A695E621524D9600328EB7 /* UIView+MD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MD.m"; sourceTree = "<group>"; };
+		F3AC5C092264B94000EF036C /* BaseUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseUIWebViewController.h; sourceTree = "<group>"; };
+		F3AC5C0A2264B94000EF036C /* BaseUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseUIWebViewController.m; sourceTree = "<group>"; };
 		F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -281,6 +287,8 @@
 			children = (
 				F372AB641EE2A91500216C16 /* BaseViewController.h */,
 				F372AB651EE2A91500216C16 /* BaseViewController.m */,
+				F3AC5C092264B94000EF036C /* BaseUIWebViewController.h */,
+				F3AC5C0A2264B94000EF036C /* BaseUIWebViewController.m */,
 				F38164522085E3C600F96CD4 /* BaseNavigationController.h */,
 				F38164532085E3C600F96CD4 /* BaseNavigationController.m */,
 			);
@@ -343,6 +351,8 @@
 			children = (
 				F372AB701EE2A9F500216C16 /* HomePageHeadView.h */,
 				F372AB711EE2A9F500216C16 /* HomePageHeadView.m */,
+				F31938502261EBA80089B78E /* HomeContentView.h */,
+				F31938512261EBA80089B78E /* HomeContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -677,6 +687,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -836,6 +847,7 @@
 				F3A695EB21524D9600328EB7 /* MDShockBannerView.m in Sources */,
 				F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */,
 				F3A695E721524D9600328EB7 /* MDBannerCollectionViewCell.m in Sources */,
+				F3AC5C0B2264B94000EF036C /* BaseUIWebViewController.m in Sources */,
 				F372AB721EE2A9F500216C16 /* HomePageHeadView.m in Sources */,
 				F372AB661EE2A91500216C16 /* BaseViewController.m in Sources */,
 				F372AB3D1EE2A15200216C16 /* main.m in Sources */,
@@ -845,6 +857,7 @@
 				F38AE055222FAC7900E3EBEE /* WHDebugMonitor.m in Sources */,
 				F38164292084504000F96CD4 /* JBTabBarController.m in Sources */,
 				F38164512085DD8500F96CD4 /* LoginViewController.m in Sources */,
+				F31938522261EBA80089B78E /* HomeContentView.m in Sources */,
 				F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */,
 				F381643A20847DFD00F96CD4 /* UIColor+JB.m in Sources */,
 				F381644220847EFA00F96CD4 /* CALayer+JB.m in Sources */,

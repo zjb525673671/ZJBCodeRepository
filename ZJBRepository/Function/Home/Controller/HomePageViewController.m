@@ -16,6 +16,8 @@
 #import "JBCycleBannerView.h"
 #import <SVGAPlayer/SVGA.h>
 #import "WHDebugToolManager.h"
+#import "HomeContentView.h"
+#import "BaseUIWebViewController.h"
 
 @interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate,SVGAPlayerDelegate>
 
@@ -47,8 +49,8 @@
 {
     [super viewDidLoad];
     [self xn_initData];
-    [self xn_initSubViews];
-//    [self xn_initCPSubViews];
+//    [self xn_initSubViews];
+    [self xn_initCPSubViews];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -124,11 +126,16 @@
 
 - (void)xn_initCPSubViews {
     UIButton *cpButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    HomeContentView *kitView = [[HomeContentView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIWindow *keywindow = [UIApplication sharedApplication].keyWindow;
     [self.view addSubview:cpButton];
+    [keywindow addSubview:kitView];
     [cpButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(self.view);
+        make.top.equalTo(self.view);
+        make.centerX.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(200, 50));
     }];
+    kitView.backgroundColor = JB_ARGB(0x234561, 0.2);
     cpButton.cp_title(@"链式编程").cp_font([UIFont systemFontOfSize:16]).cp_titleColor([UIColor blackColor]).cp_backgroundColor([UIColor yellowColor]).cp_action(self,@selector(clickAction_add));
 }
 
@@ -277,8 +284,11 @@
 }
 
 - (void)clickAction_add {
-    self.oneLabel.text = [self.oneLabel.text stringByAppendingString:@"大坏蛋"];
-    NSLog(@"你点击我了!我很不喜欢");
+//    self.oneLabel.text = [self.oneLabel.text stringByAppendingString:@"大坏蛋"];
+//    NSLog(@"你点击我了!我很不喜欢");
+    BaseUIWebViewController *webVC = [[BaseUIWebViewController alloc] init];
+    webVC.htmlUrl = @"http://h5test02.51qyin.com/page/protocol/soundXy";
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (void)clickAction_change:(UIButton *)sender {
