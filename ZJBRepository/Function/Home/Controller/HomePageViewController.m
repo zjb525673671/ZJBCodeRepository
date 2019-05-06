@@ -77,13 +77,13 @@
             self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
     }
-    for (NSInteger i = 0; i < self.presenter.giftUrlArray.count; i++) {
-        NSString *urlStr = self.presenter.giftUrlArray[i];
-        [self.parser parseWithURL:[NSURL URLWithString:urlStr] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
-            XNLog(@"预加载好了第几个=%zd",i);
-        } failureBlock:^(NSError * _Nullable error) {
-        }];
-    }
+//    for (NSInteger i = 0; i < self.presenter.giftUrlArray.count; i++) {
+//        NSString *urlStr = self.presenter.giftUrlArray[i];
+//        [self.parser parseWithURL:[NSURL URLWithString:urlStr] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
+//            XNLog(@"预加载好了第几个=%zd",i);
+//        } failureBlock:^(NSError * _Nullable error) {
+//        }];
+//    }
 //    self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timer_request) userInfo:nil repeats:YES];
 //    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
@@ -287,7 +287,7 @@
 //    self.oneLabel.text = [self.oneLabel.text stringByAppendingString:@"大坏蛋"];
 //    NSLog(@"你点击我了!我很不喜欢");
     BaseUIWebViewController *webVC = [[BaseUIWebViewController alloc] init];
-    webVC.htmlUrl = @"http://h5test02.51qyin.com/page/protocol/soundXy";
+    webVC.htmlUrl = @"https://hd.51qyin.com/activity/turntable2?refer%5Furl=1&xn_data=ewogICJsb2dpbkN1c3RvbWVySWQiIDogIjE4MTExMjEyMjIyOTUzNzAyMDIiLAogICJ1aWQiIDogIjQ1NzM2MzAwIiwKICAidmlld0N1c3RvbWVySWQiIDogIjkwNzk3NDk4IiwKICAic2hvd05vcm1hbCIgOiAiMCIsCiAgImhhdmVMaXVoYWkiIDogIjAiLAogICJwaG9uZV9udW1iZXIiIDogIjEzNzAxNzI4MTk1IiwKICAibWFya2V0TmFtZSIgOiAidm9pY2VfQXBwU3RvcmUiLAogICJhcHB2ZXJzaW9uIiA6ICIyLjEuMSIKfQ==";//@"http://h5test02.51qyin.com/page/protocol/soundXy";
     [self.navigationController pushViewController:webVC animated:YES];
 }
 

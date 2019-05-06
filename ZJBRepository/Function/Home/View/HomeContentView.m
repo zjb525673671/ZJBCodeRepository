@@ -38,9 +38,8 @@
 
     if(hitView == self){
         XNLog(@"执行了很多遍吗?");
-//        [self clickAction_dismiss];
-        
-        return self;
+        [self clickAction_dismiss];
+        return nil;
     }
 //    XNLog(@"Dismiss别人的穿透事件点击了!");
     return hitView;

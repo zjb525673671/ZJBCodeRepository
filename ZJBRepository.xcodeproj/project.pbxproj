@@ -72,6 +72,7 @@
 		F3AC5C0B2264B94000EF036C /* BaseUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AC5C0A2264B94000EF036C /* BaseUIWebViewController.m */; };
 		F3E89B8220FC80AB00EC8526 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */; };
 		F3E89B8420FC80BC00EC8526 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */; };
+		F3E8D7C7228023B100378CD7 /* HomeDetailPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E8D7C6228023B100378CD7 /* HomeDetailPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +185,8 @@
 		F3AC5C0A2264B94000EF036C /* BaseUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseUIWebViewController.m; sourceTree = "<group>"; };
 		F3E89B8020FC72BD00EC8526 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F3E89B8320FC80BC00EC8526 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F3E8D7C5228023B100378CD7 /* HomeDetailPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailPageViewController.h; sourceTree = "<group>"; };
+		F3E8D7C6228023B100378CD7 /* HomeDetailPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +327,8 @@
 			children = (
 				F372AB671EE2A95700216C16 /* HomePageViewController.h */,
 				F372AB681EE2A95700216C16 /* HomePageViewController.m */,
+				F3E8D7C5228023B100378CD7 /* HomeDetailPageViewController.h */,
+				F3E8D7C6228023B100378CD7 /* HomeDetailPageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				F381642F2084513500F96CD4 /* JBHelper.m in Sources */,
 				F381643620847DDA00F96CD4 /* UIFont+JB.m in Sources */,
 				F38AE053222FAC7900E3EBEE /* WHDebugMemoryMonitor.m in Sources */,
+				F3E8D7C7228023B100378CD7 /* HomeDetailPageViewController.m in Sources */,
 				F3A695EA21524D9600328EB7 /* MDMaskView.m in Sources */,
 				F38164462084801400F96CD4 /* UILabel+JB.m in Sources */,
 				F38164542085E3C600F96CD4 /* BaseNavigationController.m in Sources */,
