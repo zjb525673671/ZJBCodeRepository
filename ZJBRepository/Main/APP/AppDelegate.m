@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomePageViewController.h"
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -25,9 +26,30 @@
     [nav.navigationBar setBackgroundImage:newImage forBarMetrics:UIBarMetricsDefault];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    [self configureBugly];//腾讯bugly
     return YES;
 }
 
+- (void)configureBugly {
+    BuglyConfig *config = [[BuglyConfig alloc] init];
+    
+    config.unexpectedTerminatingDetectionEnable = YES; //非正常退出事件记录开关，默认关闭
+    config.reportLogLevel = BuglyLogLevelError; //报告级别
+    config.blockMonitorEnable = YES; //开启卡顿监控
+    config.blockMonitorTimeout = 8; //卡顿监控判断间隔，单位为秒
+    
+#if DEBUG
+    config.debugMode = YES; //SDK Debug信息开关, 默认关闭
+    config.channel = @"debug";
+#else
+    config.channel = @"release";
+#endif
+    [Bugly startWithAppId:@"b3d851453b"
+#if DEBUG
+        developmentDevice:YES
+#endif
+                   config:config];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

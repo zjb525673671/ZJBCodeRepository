@@ -15,6 +15,7 @@ def shared_pods
     pod 'SVGAPlayer', '~> 2.3.0' #高性能的动画播放器
     pod 'AliyunOSSiOS', '~> 2.10.7' #oss上传图片和视频文件
     pod 'VasSonic', '~> 3.0.0' #webView加载优化
+    pod 'Bugly', '~> 2.5.0' #崩溃日志
 end
 
 target 'ZJBRepository’ do

@@ -45,6 +45,14 @@
     }
 }
 
+- (void)requestInfoWithCallBack:(void (^)(BOOL isSuccess, NSString *errStr))callBack {
+    [[JBNetWorkManager shareInstance] requestBaiDuWithCallBack:^(BOOL isSuccess, NSString *errStr) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            callBack(YES, nil);
+        });
+    }];
+}
+
 - (FMDatabase *)testDB {
     if (!_testDB) {
         NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];

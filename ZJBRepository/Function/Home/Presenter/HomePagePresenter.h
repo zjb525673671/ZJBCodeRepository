@@ -30,4 +30,6 @@
  */
 - (void)help_addGiftUrlRandom;
 
+- (void)requestInfoWithCallBack:(void (^)(BOOL isSuccess, NSString *errStr))callBack;
+
 @end

@@ -12,5 +12,5 @@
 
 + (JBNetWorkManager *)shareInstance;
 
-- (void)requestBaiDu;
+- (void)requestBaiDuWithCallBack:(void (^)(BOOL isSuccess, NSString *errStr))callBack;
 @end

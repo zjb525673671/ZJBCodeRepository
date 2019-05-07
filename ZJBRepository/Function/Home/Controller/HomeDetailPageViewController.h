@@ -10,7 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol HomeDetailPageVCDelegate <NSObject>
+
+@optional
+
+/**
+ 返回数据
+ 
+ */
+- (void)delegate_dismissVCDismiss;
+
+@end
+
 @interface HomeDetailPageViewController : BaseViewController
+
+@property (nonatomic, assign) id <HomeDetailPageVCDelegate> delegate;
 
 @end
 

@@ -10,4 +10,10 @@
 
 @interface HomePageHeadView : UIView
 
+
+/**
+ 改变颜色
+ */
+- (void)public_changeTextColor;
+
 @end

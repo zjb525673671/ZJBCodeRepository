@@ -18,8 +18,9 @@
 #import "WHDebugToolManager.h"
 #import "HomeContentView.h"
 #import "BaseUIWebViewController.h"
+#import "HomeDetailPageViewController.h"
 
-@interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate,SVGAPlayerDelegate>
+@interface HomePageViewController () <JBCycleBannerViewDelegate,MDShockBannerViewDelegate,SVGAPlayerDelegate,HomeDetailPageVCDelegate>
 
 @property (nonatomic, strong) XNGradientView *maxMoneyView;
 @property (nonatomic, strong) UIImageView *successImageView;
@@ -272,6 +273,11 @@
     self.currentIndex ++;
     [self help_playWithIndex:self.currentIndex];
 }
+
+- (void)delegate_dismissVCDismiss {
+    XNLog(@"我执行了返回路径");
+}
+
 #pragma mark - ☎️notification
 
 #pragma mark - 🎬event response
@@ -286,9 +292,12 @@
 - (void)clickAction_add {
 //    self.oneLabel.text = [self.oneLabel.text stringByAppendingString:@"大坏蛋"];
 //    NSLog(@"你点击我了!我很不喜欢");
-    BaseUIWebViewController *webVC = [[BaseUIWebViewController alloc] init];
-    webVC.htmlUrl = @"https://hd.51qyin.com/activity/turntable2?refer%5Furl=1&xn_data=ewogICJsb2dpbkN1c3RvbWVySWQiIDogIjE4MTExMjEyMjIyOTUzNzAyMDIiLAogICJ1aWQiIDogIjQ1NzM2MzAwIiwKICAidmlld0N1c3RvbWVySWQiIDogIjkwNzk3NDk4IiwKICAic2hvd05vcm1hbCIgOiAiMCIsCiAgImhhdmVMaXVoYWkiIDogIjAiLAogICJwaG9uZV9udW1iZXIiIDogIjEzNzAxNzI4MTk1IiwKICAibWFya2V0TmFtZSIgOiAidm9pY2VfQXBwU3RvcmUiLAogICJhcHB2ZXJzaW9uIiA6ICIyLjEuMSIKfQ==";//@"http://h5test02.51qyin.com/page/protocol/soundXy";
-    [self.navigationController pushViewController:webVC animated:YES];
+    HomeDetailPageViewController *testVC = [[HomeDetailPageViewController alloc] init];
+    testVC.delegate = self;
+    [self.navigationController pushViewController:testVC animated:YES];
+//    BaseUIWebViewController *webVC = [[BaseUIWebViewController alloc] init];
+//    webVC.htmlUrl = @"https://hd.51qyin.com/activity/turntable2?refer%5Furl=1&xn_data=ewogICJsb2dpbkN1c3RvbWVySWQiIDogIjE4MTExMjEyMjIyOTUzNzAyMDIiLAogICJ1aWQiIDogIjQ1NzM2MzAwIiwKICAidmlld0N1c3RvbWVySWQiIDogIjkwNzk3NDk4IiwKICAic2hvd05vcm1hbCIgOiAiMCIsCiAgImhhdmVMaXVoYWkiIDogIjAiLAogICJwaG9uZV9udW1iZXIiIDogIjEzNzAxNzI4MTk1IiwKICAibWFya2V0TmFtZSIgOiAidm9pY2VfQXBwU3RvcmUiLAogICJhcHB2ZXJzaW9uIiA6ICIyLjEuMSIKfQ==";//@"http://h5test02.51qyin.com/page/protocol/soundXy";
+//    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (void)clickAction_change:(UIButton *)sender {
