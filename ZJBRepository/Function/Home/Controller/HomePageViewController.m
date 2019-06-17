@@ -51,7 +51,7 @@
     [super viewDidLoad];
     [self xn_initData];
 //    [self xn_initSubViews];
-    [self xn_initCPSubViews];
+//    [self xn_initCPSubViews];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,6 +78,7 @@
             self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
     }
+    [self xn_initSubViews];
 //    for (NSInteger i = 0; i < self.presenter.giftUrlArray.count; i++) {
 //        NSString *urlStr = self.presenter.giftUrlArray[i];
 //        [self.parser parseWithURL:[NSURL URLWithString:urlStr] completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
@@ -87,6 +88,36 @@
 //    }
 //    self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timer_request) userInfo:nil repeats:YES];
 //    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+- (void)test_sign {
+    dispatch_semaphore_t semap = dispatch_semaphore_create(2);
+    
+    dispatch_queue_t quene = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+        XNLog(@"任务1开始");
+        sleep(1);
+        XNLog(@"任务1完成");
+        dispatch_semaphore_signal(semap);
+    });
+    
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+        XNLog(@"任务2开始");
+        sleep(1);
+        XNLog(@"任务2完成");
+        dispatch_semaphore_signal(semap);
+    });
+    
+    dispatch_async(quene, ^{
+        dispatch_semaphore_wait(semap, DISPATCH_TIME_FOREVER);
+        XNLog(@"任务3开始");
+        sleep(1);
+        XNLog(@"任务3完成");
+        dispatch_semaphore_signal(semap);
+    });
+
 }
 
 - (void)xn_initSubViews
@@ -326,12 +357,22 @@
     //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742607853.svga
     //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742411015.svga
     //http://voice-oss.oss-cn-shanghai.aliyuncs.com/gift/image/1550742531055.svga
-    [self.presenter help_addGiftUrlRandom];
-    self.showLabel.text = [NSString stringWithFormat:@"总共%zd个礼物,正在播放第%zd礼物",self.presenter.animationUrlArray.count,self.currentIndex + 1];
-    if (!self.isPlaying) {
-        self.isPlaying = YES;
-        [self help_playWithIndex:0];
-    }
+//    [self.presenter help_addGiftUrlRandom];
+//    self.showLabel.text = [NSString stringWithFormat:@"总共%zd个礼物,正在播放第%zd礼物",self.presenter.animationUrlArray.count,self.currentIndex + 1];
+//    if (!self.isPlaying) {
+//        self.isPlaying = YES;
+//        [self help_playWithIndex:0];
+//    }
+    
+    [self.parser parseWithNamed:@"handinhand" inBundle:[NSBundle mainBundle] completionBlock:^(SVGAVideoEntity * _Nonnull videoItem) {
+        if (videoItem != nil) {
+            self.animationPlayer.videoItem = videoItem;
+            [self.animationPlayer startAnimation];
+        }
+        XNLog(@"播放成功");
+    } failureBlock:^(NSError * _Nonnull error) {
+        XNLog(@"播放失败");
+    }];
 }
 
 - (void)help_playWithIndex:(NSInteger)index {
@@ -420,7 +461,8 @@
     if (!_animationPlayer) {
         _animationPlayer = [[SVGAPlayer alloc] init];
         _animationPlayer.delegate = self;
-        _animationPlayer.clearsAfterStop = YES;
+        _animationPlayer.clearsAfterStop = NO;
+        _animationPlayer.loops = 1;
     }
     return _animationPlayer;
 }

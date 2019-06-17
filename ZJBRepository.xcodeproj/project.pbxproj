@@ -35,6 +35,7 @@
 		F381645E2086EF3E00F96CD4 /* JBGravityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F381645D2086EF3E00F96CD4 /* JBGravityManager.m */; };
 		F38164642086F1FC00F96CD4 /* JBGravityImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38164632086F1FC00F96CD4 /* JBGravityImageView.m */; };
 		F386FADB214FA6BE00F24E6A /* UIButton+PC.m in Sources */ = {isa = PBXBuildFile; fileRef = F386FADA214FA6BE00F24E6A /* UIButton+PC.m */; };
+		F389902F229FAA4B003C57D4 /* HomeUserTalkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F389902E229FAA4B003C57D4 /* HomeUserTalkCell.m */; };
 		F38AE050222FAC7900E3EBEE /* WHDebugToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE043222FAC7700E3EBEE /* WHDebugToolManager.m */; };
 		F38AE051222FAC7900E3EBEE /* WHDebugTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04A222FAC7700E3EBEE /* WHDebugTempVC.m */; };
 		F38AE052222FAC7900E3EBEE /* WHDebugFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04B222FAC7700E3EBEE /* WHDebugFPSMonitor.m */; };
@@ -42,6 +43,7 @@
 		F38AE054222FAC7900E3EBEE /* WHDebugConsoleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04D222FAC7700E3EBEE /* WHDebugConsoleLabel.m */; };
 		F38AE055222FAC7900E3EBEE /* WHDebugMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04E222FAC7700E3EBEE /* WHDebugMonitor.m */; };
 		F38AE056222FAC7900E3EBEE /* WHDebugCpuMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F38AE04F222FAC7700E3EBEE /* WHDebugCpuMonitor.m */; };
+		F39588A222B72F54006083DA /* handinhand.svga in Resources */ = {isa = PBXBuildFile; fileRef = F39588A122B72F54006083DA /* handinhand.svga */; };
 		F39E968E1F02321B00E34CD1 /* XNGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F39E968D1F02321B00E34CD1 /* XNGradientView.m */; };
 		F39E96A71F04A22000E34CD1 /* getMoney01.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96941F04A22000E34CD1 /* getMoney01.png */; };
 		F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */ = {isa = PBXBuildFile; fileRef = F39E96951F04A22000E34CD1 /* getMoney02.png */; };
@@ -133,6 +135,8 @@
 		F38164632086F1FC00F96CD4 /* JBGravityImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBGravityImageView.m; sourceTree = "<group>"; };
 		F386FAD9214FA6BE00F24E6A /* UIButton+PC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+PC.h"; sourceTree = "<group>"; };
 		F386FADA214FA6BE00F24E6A /* UIButton+PC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+PC.m"; sourceTree = "<group>"; };
+		F389902D229FAA4B003C57D4 /* HomeUserTalkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeUserTalkCell.h; sourceTree = "<group>"; };
+		F389902E229FAA4B003C57D4 /* HomeUserTalkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeUserTalkCell.m; sourceTree = "<group>"; };
 		F38AE042222FAC7700E3EBEE /* WHDebugTempVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugTempVC.h; sourceTree = "<group>"; };
 		F38AE043222FAC7700E3EBEE /* WHDebugToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugToolManager.m; sourceTree = "<group>"; };
 		F38AE044222FAC7700E3EBEE /* WHDebugConsoleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHDebugConsoleLabel.h; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		F38AE04D222FAC7700E3EBEE /* WHDebugConsoleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugConsoleLabel.m; sourceTree = "<group>"; };
 		F38AE04E222FAC7700E3EBEE /* WHDebugMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugMonitor.m; sourceTree = "<group>"; };
 		F38AE04F222FAC7700E3EBEE /* WHDebugCpuMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDebugCpuMonitor.m; sourceTree = "<group>"; };
+		F39588A122B72F54006083DA /* handinhand.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = handinhand.svga; sourceTree = "<group>"; };
 		F39E968C1F02321B00E34CD1 /* XNGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XNGradientView.h; sourceTree = "<group>"; };
 		F39E968D1F02321B00E34CD1 /* XNGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XNGradientView.m; sourceTree = "<group>"; };
 		F39E96941F04A22000E34CD1 /* getMoney01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getMoney01.png; sourceTree = "<group>"; };
@@ -358,6 +363,8 @@
 				F372AB711EE2A9F500216C16 /* HomePageHeadView.m */,
 				F31938502261EBA80089B78E /* HomeContentView.h */,
 				F31938512261EBA80089B78E /* HomeContentView.m */,
+				F389902D229FAA4B003C57D4 /* HomeUserTalkCell.h */,
+				F389902E229FAA4B003C57D4 /* HomeUserTalkCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -590,6 +597,7 @@
 		F39E96921F04A22000E34CD1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F39588A122B72F54006083DA /* handinhand.svga */,
 				F39E96931F04A22000E34CD1 /* getMoney */,
 			);
 			path = Source;
@@ -718,6 +726,7 @@
 				F39E96AA1F04A22000E34CD1 /* getMoney04.png in Resources */,
 				F372AB4B1EE2A15200216C16 /* LaunchScreen.storyboard in Resources */,
 				F39E96B91F04A22000E34CD1 /* 时间轴.txt in Resources */,
+				F39588A222B72F54006083DA /* handinhand.svga in Resources */,
 				F3A695E821524D9600328EB7 /* MDBannerCollectionViewCell.xib in Resources */,
 				F39E96B71F04A22000E34CD1 /* getMoney17.png in Resources */,
 				F39E96B61F04A22000E34CD1 /* getMoney16.png in Resources */,
@@ -863,6 +872,7 @@
 				F38AE055222FAC7900E3EBEE /* WHDebugMonitor.m in Sources */,
 				F38164292084504000F96CD4 /* JBTabBarController.m in Sources */,
 				F38164512085DD8500F96CD4 /* LoginViewController.m in Sources */,
+				F389902F229FAA4B003C57D4 /* HomeUserTalkCell.m in Sources */,
 				F31938522261EBA80089B78E /* HomeContentView.m in Sources */,
 				F381643E20847EA400F96CD4 /* NSString+JB.m in Sources */,
 				F381643A20847DFD00F96CD4 /* UIColor+JB.m in Sources */,
