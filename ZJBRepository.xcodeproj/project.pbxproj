@@ -10,6 +10,7 @@
 		752CCBC1DBA146A6D3B5279A /* Pods_ZJBRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066FEECD93B4B7C693616838 /* Pods_ZJBRepository.framework */; };
 		F31938522261EBA80089B78E /* HomeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F31938512261EBA80089B78E /* HomeContentView.m */; };
 		F342AA2420E37E8C00AF8DF3 /* JBNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */; };
+		F3534D2822B87DE50079D09D /* HandFail.svga in Resources */ = {isa = PBXBuildFile; fileRef = F3534D2722B87DE50079D09D /* HandFail.svga */; };
 		F372AB3D1EE2A15200216C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F372AB3C1EE2A15200216C16 /* main.m */; };
 		F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F372AB471EE2A15200216C16 /* Assets.xcassets */; };
 		F372AB4B1EE2A15200216C16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F372AB491EE2A15200216C16 /* LaunchScreen.storyboard */; };
@@ -85,6 +86,7 @@
 		F31938512261EBA80089B78E /* HomeContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeContentView.m; sourceTree = "<group>"; };
 		F342AA2220E37E8C00AF8DF3 /* JBNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBNetWorkManager.h; sourceTree = "<group>"; };
 		F342AA2320E37E8C00AF8DF3 /* JBNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBNetWorkManager.m; sourceTree = "<group>"; };
+		F3534D2722B87DE50079D09D /* HandFail.svga */ = {isa = PBXFileReference; lastKnownFileType = file; path = HandFail.svga; sourceTree = "<group>"; };
 		F372AB381EE2A15200216C16 /* ZJBRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJBRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F372AB3C1EE2A15200216C16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F372AB471EE2A15200216C16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 		F39E96921F04A22000E34CD1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F3534D2722B87DE50079D09D /* HandFail.svga */,
 				F39588A122B72F54006083DA /* handinhand.svga */,
 				F39E96931F04A22000E34CD1 /* getMoney */,
 			);
@@ -738,6 +741,7 @@
 				F39E96B51F04A22000E34CD1 /* getMoney15.png in Resources */,
 				F372AB481EE2A15200216C16 /* Assets.xcassets in Resources */,
 				F39E96A81F04A22000E34CD1 /* getMoney02.png in Resources */,
+				F3534D2822B87DE50079D09D /* HandFail.svga in Resources */,
 				F39E96AF1F04A22000E34CD1 /* getMoney09.png in Resources */,
 				F39E96AD1F04A22000E34CD1 /* getMoney07.png in Resources */,
 				F39E96B41F04A22000E34CD1 /* getMoney14.png in Resources */,

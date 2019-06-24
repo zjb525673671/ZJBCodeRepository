@@ -364,7 +364,7 @@
 //        [self help_playWithIndex:0];
 //    }
     
-    [self.parser parseWithNamed:@"handinhand" inBundle:[NSBundle mainBundle] completionBlock:^(SVGAVideoEntity * _Nonnull videoItem) {
+    [self.parser parseWithNamed:@"HandFail" inBundle:[NSBundle mainBundle] completionBlock:^(SVGAVideoEntity * _Nonnull videoItem) {
         if (videoItem != nil) {
             self.animationPlayer.videoItem = videoItem;
             [self.animationPlayer startAnimation];
@@ -405,6 +405,13 @@
     }
 }
 
+- (void)svgaPlayerDidAnimatedToFrame:(NSInteger)frame {
+    XNLog(@"播放frame=%zd",frame);
+}
+
+- (void)svgaPlayerDidAnimatedToPercentage:(CGFloat)percentage {
+    XNLog(@"播放到多少=%.2f",percentage);
+}
 #pragma mark - ☸getter and setter
 
 - (XNGradientView *)maxMoneyView {
