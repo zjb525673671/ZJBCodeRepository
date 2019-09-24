@@ -671,7 +671,6 @@
 				F372AB351EE2A15200216C16 /* Frameworks */,
 				F372AB361EE2A15200216C16 /* Resources */,
 				A8D2F18B0FBFEA9D3CCA76A4 /* [CP] Embed Pods Frameworks */,
-				FD6B4DA38B649D824DDE5994 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -693,7 +692,6 @@
 				TargetAttributes = {
 					F372AB371EE2A15200216C16 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TB5ZA428YM;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -776,7 +774,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -811,25 +809,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD6B4DA38B649D824DDE5994 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-resources.sh",
-				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RCConfig.plist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCConfig.plist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZJBRepository/Pods-ZJBRepository-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -993,7 +973,7 @@
 			baseConfigurationReference = 05DB67202032BA57E9EA128A /* Pods-ZJBRepository.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TB5ZA428YM;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJBRepository/Main/APP/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJBRepository/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1008,7 +988,7 @@
 			baseConfigurationReference = B9DF9F81997D657169BF7DD2 /* Pods-ZJBRepository.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TB5ZA428YM;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJBRepository/Main/APP/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJBRepository/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -57,6 +57,24 @@ DEPENDENCIES:
   - SVGAPlayer (~> 2.3.0)
   - VasSonic (~> 3.0.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AliyunOSSiOS
+    - Bugly
+    - ChameleonFramework
+    - FMDB
+    - GPUImage
+    - lottie-ios
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - Protobuf
+    - SDWebImage
+    - SSZipArchive
+    - SVGAPlayer
+    - VasSonic
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AliyunOSSiOS: 602b6a4e70e62a5f0a6431c20496343141d7e66f
@@ -74,6 +92,6 @@ SPEC CHECKSUMS:
   SVGAPlayer: 39ad3d16643d8c63d62bd8a3decc0de4bc9b66c4
   VasSonic: 681ec95418d485d8c501d13549e25dff18754893
 
-PODFILE CHECKSUM: 22e5fc891059c7f689d3049efc15eefa8c201529
+PODFILE CHECKSUM: a7400db290527a75e1890888148ec12fa51fc008
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.7.5
