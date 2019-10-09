@@ -16,6 +16,7 @@ def shared_pods
     pod 'AliyunOSSiOS', '~> 2.10.7' #oss上传图片和视频文件
     pod 'VasSonic', '~> 3.0.0' #webView加载优化
     pod 'Bugly', '~> 2.5.0' #崩溃日志
+    pod 'KTVHTTPCache', '~> 2.0.0'
 #    pod 'IJKPlayerLib', '~> 2.1.3' #播放器
 end
 
