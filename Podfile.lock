@@ -64,7 +64,7 @@ DEPENDENCIES:
   - VasSonic (~> 3.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - AliyunOSSiOS
     - Bugly
@@ -106,4 +106,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a9945abbfaa79042dd2837098cea6fe3dd709d3e
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3
